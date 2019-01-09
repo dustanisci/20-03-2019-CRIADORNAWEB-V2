@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/default.scss';
+@import './assets/scss/font.scss';
+
+*{
+    font-family: default;
+}
+
+html, body{
+    width:100%;
+    height:100%;
+    position:relative;
+    margin:0;
+}

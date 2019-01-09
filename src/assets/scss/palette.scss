@@ -1,0 +1,11 @@
+$palette-colors: (
+    'primary': (
+        '1': #FFF,
+    )
+    
+
+);
+
+@function palette-color($type, $color) {
+  @return map-get(map-get($palette-colors, $type), $color);
+}
