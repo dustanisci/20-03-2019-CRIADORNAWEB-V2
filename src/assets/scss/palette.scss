@@ -1,9 +1,13 @@
 $palette-colors: (
-    'primary': (
-        '1': #FFF,
+    'identity-opacity': (
+        '1': #00277a8f,
+        '2' : #006ca569,
+        '3' : #00d8e754
+    ),
+    'black' : (
+        '1' : #00000024,
+        '2' : #00000067,
     )
-    
-
 );
 
 @function palette-color($type, $color) {

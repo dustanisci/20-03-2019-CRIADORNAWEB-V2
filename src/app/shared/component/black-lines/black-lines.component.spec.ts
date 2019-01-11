@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BlackLineComponent } from './black-line.component';
+import { BlackLinesComponent } from './black-lines.component';
 
-describe('BlackLineComponent', () => {
-  let component: BlackLineComponent;
-  let fixture: ComponentFixture<BlackLineComponent>;
+describe('BlackLinesComponent', () => {
+  let component: BlackLinesComponent;
+  let fixture: ComponentFixture<BlackLinesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BlackLineComponent ]
+      declarations: [ BlackLinesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BlackLineComponent);
+    fixture = TestBed.createComponent(BlackLinesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
