@@ -5,6 +5,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TechnologyComponent } from './technology/technology.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,12 @@ import { TechnologyComponent } from './technology/technology.component';
     AboutComponent,
     ContactComponent,
     PortfolioComponent,
-    TechnologyComponent],
+    TechnologyComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    FlexLayoutModule,
+    AppRoutingModule
   ],
   exports: [
     HomeComponent

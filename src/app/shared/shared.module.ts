@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderModule } from './header/header.module';
+import { AppRoutingModule } from '../app-routing.module';
+import { FooterComponent } from './component/footer/footer.component';
+import { HeaderModule } from './component/header/header.module';
+import { PipesModule } from './pipe/pipes.module';
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     CommonModule,
-    HeaderModule
+    HeaderModule,
+    AppRoutingModule,
+    PipesModule
   ],
   exports: [
-    HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderModule,
+    PipesModule
   ]
 })
 export class SharedModule { }
