@@ -5,7 +5,8 @@ import { HeaderComponent } from './header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LogoComponent } from './logo/logo.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-import { PipesModule } from '../../pipe/pipes.module';
+import { PipeModule } from '../../pipe/pipe.module';
+import { ColoredLinesModule } from '../colored-lines/colored-lines.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PipesModule } from '../../pipe/pipes.module';
     CommonModule,
     FlexLayoutModule,
     AppRoutingModule,
-    PipesModule
+    PipeModule,
+    ColoredLinesModule
   ],
   exports: [
     NavbarComponent,

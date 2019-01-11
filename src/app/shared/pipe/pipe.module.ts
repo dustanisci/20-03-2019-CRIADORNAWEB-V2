@@ -9,13 +9,12 @@ import { TextCapitalizePipe } from './text-capitalize/text-capitalize.pipe';
     CommonModule
   ]
 })
-export class PipesModule {
+export class PipeModule {
 
   static forRoot() {
     return {
-      ngModule: PipesModule,
+      ngModule: PipeModule,
       providers: [],
     };
   }
-
 }

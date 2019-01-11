@@ -8,6 +8,10 @@
   font-weight: bolder;
 }
 
+.position-ab{
+  position:absolute;
+}
+
 .padding-10 {
   padding: 10px;
 }
@@ -48,17 +52,46 @@
   padding-right: 20px;
 }
 
-.margin-top-5 {
+.padding-b-20{
+  padding-bottom:20px;
+}
+
+.padding-t-20{
+  padding-top:20px;
+}
+
+.padding-t-30{
+  padding-top:30px;
+}
+
+.padding-t-40{
+  padding-top:40px;
+}
+
+.padding-b-25{
+  padding-bottom:25px;
+}
+
+.margin-t-5 {
   margin-top: 5px;
 }
 
-.margin-top-10 {
+.margin-t-10 {
   margin-top: 10px;
 }
 
-.margin-top-20 {
+.margin-t-20 {
   margin-top: 20px;
 }
+
+.margin-t-40{
+  margin-top:40px;
+}
+
+.margin-b-50{
+  margin-bottom:50px;
+}
+
 
 .margin-10 {
   margin: 10px;
