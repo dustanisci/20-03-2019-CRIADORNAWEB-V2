@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  private items = [
+  public items = [
     { 'name': 'início', 'url': '/home' },
     { 'name': 'tecnologias', 'url': '/technology' },
     { 'name': 'sobre', 'url': '/about' },
@@ -15,9 +15,16 @@ export class NavbarComponent implements OnInit {
     { 'name': 'contato', 'url': '/contact' }
   ];
 
+  public menuIcon: boolean = false;
+  public menu: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public menuMobile(event) {
+    event.target.innerWidth <= 1279 ? this.menu = true : this.menu = false
   }
 
 }
