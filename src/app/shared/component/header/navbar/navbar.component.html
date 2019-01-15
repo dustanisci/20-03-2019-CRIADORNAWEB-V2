@@ -1,4 +1,4 @@
-<div class="icons" (click)="menuIcon = !menuIcon">
+<div class="icons" (click)="menuIcon = !menuIcon; scrollTop()">
   <i fxHide.gt-md="true" [ngClass]="menuIcon === true ? 'opacity-transition-of' : 'opacity-transition-on'" class="d-none z-index-10 position-ab material-icons txt-right">menu</i>
   <i fxHide.gt-md="true" [ngClass]="menuIcon === false ? 'opacity-transition-of' : 'opacity-transition-on'" class="d-none z-index-10 position-fx material-icons txt-right">close</i>
 </div>

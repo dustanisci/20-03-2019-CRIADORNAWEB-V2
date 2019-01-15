@@ -28,4 +28,7 @@ export class NavbarComponent implements OnInit {
     event <= 1279 ? this.menu = true : this.menu = false
   }
 
+  public scrollTop(){
+    window.scrollTo(0, 0);
+  }
 }

@@ -23,8 +23,10 @@
 nav {
   a {
     text-decoration: none;
+    @media only screen and (max-height: 600px) {
+        
+    }
   }
-
   @media only screen and (max-width: 1279px) {
     transition: all 0s;
     height: 0;
@@ -40,9 +42,8 @@ nav {
     position: fixed;
     left: 0;
     top: 0;
-    padding-top: 120px;
+    padding-top: 60px;
     padding-left: 50px;
-    overflow-y: scroll;
     transition: all 1s;
     height: 100%;
   }
@@ -50,7 +51,7 @@ nav {
   a {
     @media only screen and (max-width: 1279px) {
       display: block !important;
-      margin-bottom: 40px;
+      margin-bottom: 15px;
       text-align: left;
       color: palette-color('tertiary', '1');
       padding: 10px 5px 10px 5px;
