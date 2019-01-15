@@ -21,10 +21,11 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.menuMobile(window.innerWidth);
   }
 
   public menuMobile(event) {
-    event.target.innerWidth <= 1279 ? this.menu = true : this.menu = false
+    event <= 1279 ? this.menu = true : this.menu = false
   }
 
 }

@@ -2,10 +2,27 @@
   padding-left: 10%;
   padding-right: 10%;
   position: relative;
+
+  @media only screen and (max-width: 1279px) {
+    padding-left:40px;
+    padding-right:40px;
+  }
 }
 
-.hidden{
+.d-none{
+  display:none;
+}
+
+.d-block{
+  display:block;
+}
+
+.d-inline{
   display:inline;
+}
+
+.d-inline-block{
+  display:inline-block;
 }
 
 .opacity-transition-on{
