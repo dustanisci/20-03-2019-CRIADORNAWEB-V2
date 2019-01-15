@@ -4,7 +4,7 @@
 </div>
 
 <nav class="txt-center" (window:resize)="menuMobile($event.target.innerWidth)" [ngClass]="{'visible-nav': this.menu === true && this.menuIcon === true }">
-  <a fxHide.lt-lg="true" class="padding-l-15 padding-r-15" *ngFor="let item of items" routerLink="{{ item.url }}">
+  <a fxHide.lt-lg="true" class="padding-l-15 padding-r-15" *ngFor="let item of items" routerLink="{{ item.url }}" routerLinkActive="item-active">
     {{item.name | textCapitalize }}
   </a>
 </nav>

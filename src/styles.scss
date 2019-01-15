@@ -1,4 +1,5 @@
 @import './assets/scss/default.scss';
+@import './assets/scss/palette.scss';
 
 @font-face {
   font-family: 'default';
@@ -15,4 +16,5 @@ body {
   height: 100%;
   position: relative;
   margin: 0;
+  background: palette-color('primary-opacity', '6');
 }
