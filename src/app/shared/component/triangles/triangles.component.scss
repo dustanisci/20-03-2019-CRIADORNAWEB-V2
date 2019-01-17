@@ -1,0 +1,46 @@
+.triangle{
+
+    div{
+        display:inline;
+        position:relative;
+    }
+
+    div:nth-of-type(1){
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 13px 0 13px 25px;
+        border-color: transparent transparent transparent rgba(0, 66, 139, 0.3);
+    }
+
+    div:nth-of-type(2){
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15px 30px 15px 0;
+        border-color: transparent rgba(255, 216, 236, 0.4) transparent transparent;
+        top:20px;
+        left:15px;
+        
+    }
+
+    div:nth-of-type(3){
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 13px 0 13px 25px;
+        border-color: transparent transparent transparent rgba(0, 232, 240, 0.3);
+        left:53px;
+        top:20px;
+    }
+
+    div:nth-of-type(4){
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 13px 0 13px 25px;
+        border-color: transparent transparent transparent rgba(0, 134, 180, 0.3);
+        top:43px;
+
+    }
+}

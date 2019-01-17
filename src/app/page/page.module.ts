@@ -7,6 +7,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TechnologyComponent } from './technology/technology.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from '../app-routing.module';
+import { TrianglesModule } from '../shared/component/triangles/triangles.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,10 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     CommonModule,
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TrianglesModule
   ],
   exports: [
-    HomeComponent
   ]
 })
 export class PageModule { }

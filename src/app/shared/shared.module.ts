@@ -4,6 +4,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FooterComponent } from './component/footer/footer.component';
 import { HeaderModule } from './component/header/header.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TrianglesModule } from './component/triangles/triangles.module';
 
 @NgModule({
   declarations: [
@@ -13,11 +14,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     HeaderModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    TrianglesModule
   ],
   exports: [
     FooterComponent,
-    HeaderModule
+    HeaderModule,
+    TrianglesModule
   ]
 })
 export class SharedModule { }
