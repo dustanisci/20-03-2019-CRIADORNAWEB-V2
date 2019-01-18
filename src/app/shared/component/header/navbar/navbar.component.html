@@ -3,7 +3,7 @@
   <i fxHide.gt-md="true" [ngClass]="menuIcon === false ? 'opacity-transition-of' : 'opacity-transition-on'" class="d-none z-index-10 position-fx material-icons txt-right">close</i>
 </div>
 
-<nav class="txt-center" (window:resize)="menuMobile($event.target.innerWidth)" [ngClass]="{'visible-nav': this.menu === true && this.menuIcon === true }">
+<nav class="txt-right" (window:resize)="menuMobile($event.target.innerWidth)" [ngClass]="{'visible-nav': this.menu === true && this.menuIcon === true }">
   <a fxHide.lt-lg="true" class="padding-l-15 padding-r-15" *ngFor="let item of items" routerLink="{{ item.url }}" routerLinkActive="item-active">
     {{item.name | textCapitalize }}
   </a>

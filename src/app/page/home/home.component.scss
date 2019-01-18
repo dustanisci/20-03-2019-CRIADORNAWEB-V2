@@ -1,4 +1,21 @@
-content p{
-    margin:0;
-    margin-top:4px;
+content p {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 11pt;
+}
+
+h2 {
+  font-size: 16pt;
+}
+
+.triangle-settings {
+  position: absolute;
+  left: 80px;
+  top: -100px;
+
+  @media only screen and (max-width: 959px) {
+    position: relative;
+    left: auto;
+    margin-bottom: 90px;
+  }
 }
