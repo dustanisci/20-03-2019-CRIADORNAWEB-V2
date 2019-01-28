@@ -7,12 +7,13 @@ import { TechnologyComponent } from './page/technology/technology.component';
 import { PortfolioComponent } from './page/portfolio/portfolio.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'technology', component: TechnologyComponent }
+  { path: 'technology', component: TechnologyComponent },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -7,12 +7,14 @@ import { LogoComponent } from './logo/logo.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { PipeModule } from '../../pipe/pipe.module';
 import { ColoredLinesModule } from '../colored-lines/colored-lines.module';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     HeaderComponent,
-    LogoComponent
+    LogoComponent,
+    BannerComponent
   ],
   imports: [
     CommonModule,
@@ -21,9 +23,13 @@ import { ColoredLinesModule } from '../colored-lines/colored-lines.module';
     PipeModule,
     ColoredLinesModule
   ],
+  providers: [
+    NavbarComponent
+  ],
   exports: [
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    BannerComponent
   ]
 })
 export class HeaderModule { }

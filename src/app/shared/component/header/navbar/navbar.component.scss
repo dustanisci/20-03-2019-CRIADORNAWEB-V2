@@ -27,6 +27,7 @@ nav {
     text-decoration: none;
     padding-top: 20px;
     padding-bottom: 20px;
+    color: palette-color('primary', '1');
 
     &.item-active {
       color: palette-color('primary', '1') !important;
@@ -37,7 +38,7 @@ nav {
     }
 
     &:visited{
-      color: palette-color('tertiary', '2');
+      color: palette-color('primary', '1');
       @media only screen and (max-width: 959px) {
         color: palette-color('tertiary', '1');
       }

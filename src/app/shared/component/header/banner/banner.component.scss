@@ -1,0 +1,12 @@
+div {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+  opacity: 0.8;
+
+  @media only screen and (max-width: 1279px) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+}

@@ -8,6 +8,7 @@ import { TechnologyComponent } from './technology/technology.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from '../app-routing.module';
 import { TrianglesModule } from '../shared/component/triangles/triangles.module';
+import { HeaderModule } from '../shared/component/header/header.module';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,14 @@ import { TrianglesModule } from '../shared/component/triangles/triangles.module'
     AboutComponent,
     ContactComponent,
     PortfolioComponent,
-    TechnologyComponent
+    TechnologyComponent,
   ],
   imports: [
     CommonModule,
     FlexLayoutModule,
     AppRoutingModule,
-    TrianglesModule
+    TrianglesModule,
+    HeaderModule
   ],
   exports: [
   ]
