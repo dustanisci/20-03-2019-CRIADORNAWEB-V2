@@ -4,7 +4,10 @@
 </div>
 
 <nav class="txt-right" (window:resize)="menuMobile($event.target.innerWidth)" [ngClass]="{'visible-nav': this.menu === true && this.menuIcon === true }">
-  <a (click)="menuIcon = !menuIcon; scrollTop()" fxHide.lt-lg="true" class="padding-l-15 padding-r-15" *ngFor="let item of items" routerLink="{{ item.url }}" routerLinkActive="item-active">
-    {{item.name | textCapitalize }}
-  </a>
+  <label *ngFor="let item of items | keyvalue">
+    <a *ngFor="let subitem of item.value" (click)="menuIcon = !menuIcon; scrollTop()" fxHide.lt-lg="true" class="padding-l-15 padding-r-15"
+      routerLink="{{ subitem.url }}" routerLinkActive="item-active">
+      {{ subitem.name | textCapitalize }}
+    </a>
+  </label>
 </nav>

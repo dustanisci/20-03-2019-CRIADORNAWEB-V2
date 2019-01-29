@@ -1,2 +1,5 @@
+<a *ngIf="linkPage" routerLink="{{ linkPage }}">
+  <div [ngStyle]="{ 'background-image': 'url('+urlImage+')'}"></div>
+</a>
 
-  <div #banner (window:resize)="adjustBanner()" [ngStyle]="{ 'background-image': 'url(../../../../../assets/img/banner-contato.jpg)', 'height' : adjustedHeight + 'px' }"></div>
+<div *ngIf="!linkPage" [ngStyle]="{ 'background-image': 'url('+urlImage+')'}"></div>

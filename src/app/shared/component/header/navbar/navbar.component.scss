@@ -29,6 +29,10 @@ nav {
     padding-bottom: 20px;
     color: palette-color('primary', '1');
 
+    @media only screen and (max-width: 1279px) {
+      color: palette-color('tertiary', '1') !important;
+    }
+
     &.item-active {
       color: palette-color('primary', '1') !important;
       font-weight: bolder;

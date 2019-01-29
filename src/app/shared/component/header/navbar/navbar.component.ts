@@ -7,18 +7,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  public items = [
-    { 'name': 'início', 'url': '/home' },
-    { 'name': 'tecnologias', 'url': '/technology' },
-    { 'name': 'sobre', 'url': '/about' },
-    { 'name': 'portfólio', 'url': '/portfolio' },
-    { 'name': 'contato', 'url': '/contact' }
-  ];
+  public items = {
+    '1-home': [{
+      'name': 'início', 'url': '/home'
+    }],
+    '2-technology': [{
+      'name': 'tecnologias', 'url': '/technology'
+    }],
+    '3-about': [{
+      'name': 'sobre', 'url': '/about'
+    }],
+    '4-portfolio': [{
+      'name': 'portfólio', 'url': '/portfolio'
+    }],
+    '5-contact': [{
+      'name': 'contato', 'url': '/contact'
+    }]
+  };
+
+  public teste(e){
+    console.log(e)
+  }
 
   public menuIcon: boolean = false;
   public menu: boolean = false;
 
-  constructor() { }
+  constructor() {
+
+
+  }
 
   ngOnInit() {
     this.menuMobile(window.innerWidth);
@@ -28,7 +45,7 @@ export class NavbarComponent implements OnInit {
     event <= 1279 ? this.menu = true : this.menu = false
   }
 
-  public scrollTop(){
+  public scrollTop() {
     window.scrollTo(0, 0);
   }
 }
