@@ -9,7 +9,6 @@ import { NavbarComponent } from '../navbar/navbar.component';
 export class LogoComponent implements OnInit {
 
   constructor(private navbar: NavbarComponent) { 
-    
   }
 
   ngOnInit() {

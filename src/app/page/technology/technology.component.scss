@@ -1,23 +1,24 @@
 @import './../../../assets/scss/palette.scss';
 
-h2{
-    color: palette-color('primary', '1');
-}
-
-h3{
-    color: palette-color('primary', '3');
-}
-
-main{
-    content{
-        @media only screen and (max-width: 959px) {
-            margin-top:0px;
-        }
+main {
+  content {
+    @media only screen and (max-width: 959px) {
+      margin-top: 0px;
     }
 
-    > div {
-        @media only screen and (max-width: 959px) {
-            margin-bottom:50px;
-        } 
+    h2 {
+      color: palette-color('primary', '1');
     }
+
+    h3 {
+      color: palette-color('primary', '3');
+    }
+    
+  }
+
+  >div {
+    @media only screen and (max-width: 959px) {
+      margin-bottom: 50px;
+    }
+  }
 }

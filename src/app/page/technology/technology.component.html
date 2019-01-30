@@ -1,48 +1,58 @@
-<div class="min-height-100">
-  <main class="container padding-t-150">
+<div class="min-height-100 margin-b-120">
+  <main class="container padding-t-150" fxLayout="column" fxLayoutGap="75px">
 
-    <div fxLayout="row" class="margin-b-75">
+    <div fxLayout="row">
       <app-banner linkPage="{{ navbar.items['5-contact'][0].url }}" urlImage="./assets/img/banner-tecnologias.jpg" fxFlex="100"></app-banner>
     </div>
 
-    <content class="txt-center margin-b-75 margin-t-100" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="75px">
+    <content class="txt-center" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="120px">
       <div fxFlex.gt-sm="33.33">
         <h2 class="f-size-title margin-0">Back-end</h2>
         <h3 class="f-size-subtitle margin-0">(Parte funcional)</h3>
-        <ul class="list">
-          <li class="margin-t-10">Java</li>
-          <li class="margin-t-10">Hibernate</li>
-          <li class="margin-t-10">JPA</li>
-          <li class="margin-t-10">Spring MVC</li>
-          <li class="margin-t-10">Spring Boot</li>
+        <ul class="list padding-b-50" fxLayoutGap="10px" fxLayout="column">
+          <li>NodeJS</li>
+          <li>Java</li>
+          <li>Hibernate</li>
+          <li>JPA</li>
+          <li>Spring MVC</li>
+          <li>Spring Boot</li>
         </ul>
+        <app-triangles></app-triangles>
       </div>
 
       <div fxFlex.gt-sm="33.33">
         <h2 class="f-size-title margin-0">Front-end</h2>
         <h3 class="f-size-subtitle margin-0">(Parte funcional e visual)</h3>
-        <ul class="list">
-          <li class="margin-t-10">Angular 2+</li>
-          <li class="margin-t-10">HTML 5</li>
-          <li class="margin-t-10">CSS 3</li>
-          <li class="margin-t-10">Javascript</li>
-          <li class="margin-t-10">jQuery</li>
-          <li class="margin-t-10">SASS</li>
-          <li class="margin-t-10">SASS</li>
-          <li class="margin-t-10">Compass</li>
+        <ul class="list padding-b-50" fxLayoutGap="10px" fxLayout="column">
+          <li>Angular 2+</li>
+          <li>HTML 5</li>
+          <li>CSS 3</li>
+          <li>Javascript</li>
+          <li>TypeScript</li>
+          <li>ECMAScript</li>
+          <li>Material Design</li>
+          <li>jQuery</li>
+          <li>SASS</li>
+          <li>Compass</li>
+          <li>Bootstrap</li>
+          <li>Materialize</li>
+          <li>Jasmine</li>
+          <li>Jersey</li>
         </ul>
+        <app-triangles></app-triangles>
       </div>
 
       <div fxFlex.gt-sm="33.33">
         <h2 class="f-size-title margin-0">Banco de dados</h2>
         <h3 class="f-size-subtitle margin-0">(Armazenamento de informações)</h3>
-        <ul class="list">
-          <li class="margin-t-10">MySQL</li>
-          <li class="margin-t-10">SQL</li>
-          <li class="margin-t-10">Oracle</li>
-          <li class="margin-t-10">MongoDB</li>
-          <li class="margin-t-10">MariaDB</li>
+        <ul class="list padding-b-50" fxLayoutGap="10px" fxLayout="column">
+          <li>MySQL</li>
+          <li>SQL</li>
+          <li>Oracle</li>
+          <li>MongoDB</li>
+          <li>MariaDB</li>
         </ul>
+        <app-triangles></app-triangles>
       </div>
     </content>
 

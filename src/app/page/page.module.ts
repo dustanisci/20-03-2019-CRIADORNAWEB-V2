@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from '../app-routing.module';
 import { TrianglesModule } from '../shared/component/triangles/triangles.module';
 import { HeaderModule } from '../shared/component/header/header.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,7 @@ import { HeaderModule } from '../shared/component/header/header.module';
     CommonModule,
     FlexLayoutModule,
     AppRoutingModule,
-    TrianglesModule,
-    HeaderModule
+    SharedModule
   ],
   exports: [
   ]

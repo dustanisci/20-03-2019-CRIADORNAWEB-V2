@@ -5,10 +5,12 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HeaderModule } from './component/header/header.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TrianglesModule } from './component/triangles/triangles.module';
+import { BannerComponent } from './component/banner/banner.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
+    BannerComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { TrianglesModule } from './component/triangles/triangles.module';
   exports: [
     FooterComponent,
     HeaderModule,
-    TrianglesModule
+    TrianglesModule,
+    BannerComponent
   ]
 })
 export class SharedModule { }

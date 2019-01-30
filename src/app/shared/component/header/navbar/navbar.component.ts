@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KeyValuePipe } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -25,16 +26,10 @@ export class NavbarComponent implements OnInit {
     }]
   };
 
-  public teste(e){
-    console.log(e)
-  }
-
   public menuIcon: boolean = false;
   public menu: boolean = false;
 
   constructor() {
-
-
   }
 
   ngOnInit() {
