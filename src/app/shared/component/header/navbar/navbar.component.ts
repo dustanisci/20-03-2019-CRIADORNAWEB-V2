@@ -15,11 +15,11 @@ export class NavbarComponent implements OnInit {
     '2-technology': [{
       'name': 'tecnologias', 'url': '/technology'
     }],
-    '3-about': [{
-      'name': 'sobre', 'url': '/about'
-    }],
-    '4-portfolio': [{
+    '3-portfolio': [{
       'name': 'portfólio', 'url': '/portfolio'
+    }],
+    '4-about': [{
+      'name': 'sobre', 'url': '/about'
     }],
     '5-contact': [{
       'name': 'contato', 'url': '/contact'

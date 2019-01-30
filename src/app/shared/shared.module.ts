@@ -17,7 +17,7 @@ import { BannerComponent } from './component/banner/banner.component';
     HeaderModule,
     AppRoutingModule,
     FlexLayoutModule,
-    TrianglesModule
+    TrianglesModule,
   ],
   exports: [
     FooterComponent,
