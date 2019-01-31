@@ -1,9 +1,9 @@
-<div class="icons" (click)="menuIcon = !menuIcon; scrollTop()">
-  <i fxHide.gt-md="true" [ngClass]="menuIcon === true ? 'opacity-transition-of' : 'opacity-transition-on'" class="d-none z-index-10 position-ab material-icons txt-right">menu</i>
-  <i fxHide.gt-md="true" [ngClass]="menuIcon === false ? 'opacity-transition-of' : 'opacity-transition-on'" class="d-none z-index-10 position-fx material-icons txt-right">close</i>
+<div class="icons">
+  <i (click)="menuIcon = !menuIcon; scrollTop()" fxHide.gt-md="true" [ngClass]="menuIcon === true ? 'opacity-transition-of' : 'opacity-transition-on'" class="d-none z-index-10 position-ab material-icons txt-right">menu</i>
+  <i (click)="menuIcon = !menuIcon; scrollTop()" fxHide.gt-md="true" [ngClass]="menuIcon === false ? 'opacity-transition-of' : 'opacity-transition-on'" class="d-none z-index-10 position-fx material-icons txt-right">close</i>
 </div>
 
-<nav class="txt-right" (window:resize)="menuMobile($event.target.innerWidth)" [ngClass]="{'visible-nav': this.menu === true && this.menuIcon === true }">
+<nav class="txt-right" (window:resize)="menuMobile($event.target.innerWidth)" [ngClass]="{'visible-nav': this.menuIcon === true }">
   <label *ngFor="let item of items | keyvalue">
     <a *ngFor="let subitem of item.value" (click)="menuIcon = !menuIcon; scrollTop()" fxHide.lt-lg="true" class="padding-l-15 padding-r-15"
       routerLink="{{ subitem.url }}" routerLinkActive="item-active">

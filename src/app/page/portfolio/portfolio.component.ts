@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { PortfolioService } from './portfolio.service';
 import { Portfolio } from 'src/app/shared/model/portfolio';
@@ -6,14 +6,15 @@ import { Portfolio } from 'src/app/shared/model/portfolio';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss'],
+  styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit {
-  public portfolio2;
-  constructor(private portfolioService: PortfolioService,private portfolio: Portfolio) {
-  }
 
-  ngOnInit() {
+export class PortfolioComponent {
+
+  constructor(
+    private portfolioService: PortfolioService,
+    private portfolio: Portfolio) {
+
     this.getProject();
   }
 
@@ -28,4 +29,5 @@ export class PortfolioComponent implements OnInit {
         }
       );
   }
+
 }

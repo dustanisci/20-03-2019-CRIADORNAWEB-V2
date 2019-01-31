@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TextCapitalizePipe } from './text-capitalize/text-capitalize.pipe';
+import { ReversePipe } from './reverse/reverse.pipe';
 
 @NgModule({
-  declarations: [TextCapitalizePipe],
+  declarations: [TextCapitalizePipe, ReversePipe],
   exports: [TextCapitalizePipe],
   imports: [
     CommonModule

@@ -8,10 +8,11 @@ import { TechnologyComponent } from './technology/technology.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { PortfolioService } from './portfolio/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Portfolio } from '../shared/model/portfolio';
+import { PipeModule } from '../shared/pipe/pipe.module';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,9 @@ import { Portfolio } from '../shared/model/portfolio';
     FlexLayoutModule,
     AppRoutingModule,
     SharedModule,
-    GalleryModule,
-    HttpClientModule
+    HttpClientModule,
+    PipeModule,
+    GalleryModule
   ],
   providers: [
     PortfolioService,

@@ -8,7 +8,7 @@ import { BlackLinesModule } from './shared/component/black-lines/black-lines.mod
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import 'mousetrap';
-import { GalleryModule } from '@ks89/angular-modal-gallery';
+import {GalleryModule} from '@ks89/angular-modal-gallery';
 
 @NgModule({
   declarations: [

@@ -6,18 +6,22 @@ import { HeaderModule } from './component/header/header.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TrianglesModule } from './component/triangles/triangles.module';
 import { BannerComponent } from './component/banner/banner.component';
+import { ModalComponent } from './component/modal/modal.component';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 @NgModule({
   declarations: [
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    ModalComponent,
   ],
   imports: [
     CommonModule,
     HeaderModule,
     AppRoutingModule,
     FlexLayoutModule,
-    TrianglesModule,
+    TrianglesModule, 
+    GalleryModule 
   ],
   exports: [
     FooterComponent,

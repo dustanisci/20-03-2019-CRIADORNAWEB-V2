@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
   }
 
   public menuMobile(event) {
-    event <= 1279 ? this.menu = true : this.menu = false
+    event <= 1279 ? this.menu = true : this.menu = false;
   }
 
   public scrollTop() {
