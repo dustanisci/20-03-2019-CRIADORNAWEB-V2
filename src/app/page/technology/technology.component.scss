@@ -13,10 +13,16 @@ main {
     h3 {
       color: palette-color('primary', '3');
     }
-    
   }
 
-  >div {
+  app-triangles {
+    @media only screen and (max-width: 959px) {
+      left: -20px;
+      position:relative;
+    }
+  }
+
+  > div {
     @media only screen and (max-width: 959px) {
       margin-bottom: 50px;
     }
