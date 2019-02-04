@@ -12,7 +12,6 @@ import { PortfolioService } from './portfolio/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Portfolio } from '../shared/model/portfolio';
 import { PipeModule } from '../shared/pipe/pipe.module';
-import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 @NgModule({
   declarations: [
@@ -30,11 +29,9 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
     SharedModule,
     HttpClientModule,
     PipeModule,
-    GalleryModule
   ],
   providers: [
-    PortfolioService,
-    Portfolio,
+    PortfolioService
   ]
 })
 export class PageModule { }

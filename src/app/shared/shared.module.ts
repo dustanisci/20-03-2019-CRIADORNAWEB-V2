@@ -27,7 +27,8 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
     FooterComponent,
     HeaderModule,
     TrianglesModule,
-    BannerComponent
+    BannerComponent,
+    ModalComponent
   ]
 })
 export class SharedModule { }

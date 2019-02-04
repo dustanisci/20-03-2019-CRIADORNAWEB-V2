@@ -1,0 +1,31 @@
+@import './../../../assets/scss/palette.scss';
+
+content {
+  >div {
+
+    label {
+      color: palette-color('primary', '1');
+    }
+
+    img {
+      @media only screen and (max-width: 500px) {}
+    }
+
+    a {
+
+      color: palette-color('primary', '2');
+
+      @media only screen and (max-width: 500px) {
+        word-wrap: break-word;
+        width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media only screen and (max-width: 959px) {
+      margin-bottom: 90px !important;
+    }
+  }
+}

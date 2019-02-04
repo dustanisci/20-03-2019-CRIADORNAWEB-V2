@@ -17,3 +17,17 @@ body {
   position: relative;
   margin: 0;
 }
+
+.inside.right-arrow-image, .inside.left-arrow-image{
+  padding:20px !important;
+}
+
+.inside.right-arrow-preview-image, .inside.left-arrow-preview-image{
+  padding:10px !important;
+  
+}
+
+.inside.right-arrow-image, .inside.left-arrow-image, .inside.right-arrow-preview-image, .inside.left-arrow-preview-image{
+  background-repeat: no-repeat !important;
+  background-position: center;
+}

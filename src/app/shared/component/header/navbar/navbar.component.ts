@@ -27,7 +27,6 @@ export class NavbarComponent implements OnInit {
   };
 
   public menuIcon: boolean = false;
-  public menu: boolean = false;
 
   constructor() {
   }
@@ -37,7 +36,7 @@ export class NavbarComponent implements OnInit {
   }
 
   public menuMobile(event) {
-    event <= 1279 ? this.menu = true : this.menu = false;
+    event <= 1279 ? this.menuIcon = false : this.menuIcon = true;
   }
 
   public scrollTop() {
