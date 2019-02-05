@@ -11,14 +11,15 @@
           <div id="whats-header" fxLayoutAlign="center center"></div>
 
           <div id="whats-body" fxLayout="row">
-            <div id="whats-send" fxLayoutAlign="end end">
-              <textarea class="d-inline" placeholder="Digite sua mensagem"></textarea>
+            
+            <form [formGroup]="formWhats" id="whats-send" fxLayoutAlign="end end">
+              <textarea ngModel formControlName="textWhats" class="d-inline" placeholder="Digite sua mensagem"></textarea>
               <div class="d-inline-block margin-l-10">
-                <a class="send" fxLayoutAlign="center center">
+                <a href="https://api.whatsapp.com/send?phone=5511959662923&text={{ formWhats.value.textWhats }}" target="_blank" class="send" fxLayoutAlign="center center">
                   <i class="material-icons">send</i>
                 </a>
               </div>
-            </div>
+            </form>
 
           </div>
         </div>

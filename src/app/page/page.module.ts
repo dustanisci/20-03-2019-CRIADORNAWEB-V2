@@ -12,6 +12,7 @@ import { PortfolioService } from './portfolio/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Portfolio } from '../shared/model/portfolio';
 import { PipeModule } from '../shared/pipe/pipe.module';
+import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,9 +30,12 @@ import { PipeModule } from '../shared/pipe/pipe.module';
     SharedModule,
     HttpClientModule,
     PipeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
-    PortfolioService
+    PortfolioService,
+    FormBuilder
   ]
 })
 export class PageModule { }
