@@ -7,10 +7,6 @@ content {
       color: palette-color('primary', '1');
     }
 
-    img {
-      @media only screen and (max-width: 500px) {}
-    }
-
     a {
 
       color: palette-color('primary', '2');
