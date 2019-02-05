@@ -40,6 +40,10 @@
   min-height: 100%;
 }
 
+.height-100{
+  height:100%;
+}
+
 .d-none {
   display: none;
 }
@@ -136,7 +140,7 @@
 }
 
 .padding-xl-tp-10 {
-  @media only screen and (min-width: 2000px) {
+  @media only screen and (min-width: 1700px) {
     padding-top: 10% !important;
   }
 }
@@ -159,6 +163,10 @@
 
 .padding-t-150 {
   padding-top: 150px;
+}
+
+.padding-t-175{
+  padding-top:175px;
 }
 
 .padding-t-200 {
@@ -267,4 +275,8 @@
 
 .txt-center {
   text-align: center;
+}
+
+.txt-justify{
+  text-align:justify;
 }
