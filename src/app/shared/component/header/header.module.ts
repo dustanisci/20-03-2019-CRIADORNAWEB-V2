@@ -19,10 +19,10 @@ import { ColoredLinesModule } from '../colored-lines/colored-lines.module';
     FlexLayoutModule,
     AppRoutingModule,
     PipeModule,
-    ColoredLinesModule
+    ColoredLinesModule,
   ],
   providers: [
-    NavbarComponent
+    NavbarComponent,
   ],
   exports: [
     NavbarComponent,

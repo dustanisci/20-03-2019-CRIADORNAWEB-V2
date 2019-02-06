@@ -21,7 +21,7 @@ import {GalleryModule} from '@ks89/angular-modal-gallery';
     SharedModule,
     BlackLinesModule,
     FlexLayoutModule,
-    GalleryModule.forRoot()
+    GalleryModule.forRoot(), 
   ],
   providers: [],
   bootstrap: [AppComponent]

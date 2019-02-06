@@ -10,7 +10,6 @@ import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { PortfolioService } from './portfolio/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
-import { Portfolio } from '../shared/model/portfolio';
 import { PipeModule } from '../shared/pipe/pipe.module';
 import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
@@ -31,7 +30,8 @@ import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     PipeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   providers: [
     PortfolioService,
