@@ -1,48 +1,26 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Animations, Opacity } from 'src/app/shared/model/animations';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-  animations: [
-    trigger('scrollAnimation', [
-      state('show', style({
-        opacity: 1,
-        transform: "translateX(0)"
-      })),
-      state('hide', style({
-        opacity: 0,
-        transform: "translateX(-100%)"
-      })),
-      transition('show => hide', animate('700ms ease-out')),
-      transition('hide => show', animate('700ms ease-in'))
-    ])
-  ]
+  animations: [ Opacity ]
 })
-export class AboutComponent implements OnInit{
-  public state = "hide";
+export class AboutComponent extends Animations implements OnInit{
+  
   constructor(private el: ElementRef) {
-  }
+    super();
+   }
 
   @HostListener('window:scroll', ['$event'])
 
-  public checkScroll() {
-    const componentPosition = this.el.nativeElement.offsetTop
-    const scrollPosition = window.pageYOffset
-
-    if (scrollPosition >= componentPosition) {
-      this.state = 'show'
-    } else {
-      this.state = 'hide'
-    }
+  public checkScrollFather() {
+    this.checkScroll(this.el.nativeElement.offsetTop, window.pageYOffset);
   }
 
   ngOnInit(){
-    setTimeout( () => {
-      this.el.nativeElement.offsetTop + 20 <= window.innerHeight ? this.state = "show" : this.state = "hide";
-    }, 50);
+    this.checkOpenComponent(this.el.nativeElement.offsetTop);
   }
-
-
+  
 }
