@@ -225,7 +225,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/component/header/logo/logo.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/shared/component/header/logo/logo.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -257,21 +257,18 @@ import { NavbarComponent } from &#x27;../navbar/navbar.component&#x27;;
   styleUrls: [&#x27;./logo.component.scss&#x27;]
 })
 export class LogoComponent implements OnInit {
-
-  constructor(private navbar: NavbarComponent) { 
+  constructor(private navbar: NavbarComponent) {
   }
 
   ngOnInit() {
-    
   }
 
-}
-</code></pre>
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;a routerLink&#x3D;&quot;navbar.items[&#x27;1-home&#x27;][0].url&quot;&gt;
-  &lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;assets/img/logo.png&quot; /&gt;
+  &lt;img data-aos&#x3D;&quot;flip-left&quot; data-aos-once&#x3D;&quot;true&quot; class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;assets/img/logo.png&quot; /&gt;
 &lt;/a&gt;</code></pre>
     </div>
 
@@ -316,7 +313,7 @@ export class LogoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><a routerLink="navbar.items[\'1-home\'][0].url">  <img class="img-responsive" src="assets/img/logo.png" /></a></div>'
+        var COMPONENT_TEMPLATE = '<div><a routerLink="navbar.items[\'1-home\'][0].url">  <img data-aos="flip-left" data-aos-once="true" class="img-responsive" src="assets/img/logo.png" /></a></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlackLinesComponent', 'selector': 'app-black-lines'},{'name': 'ColoredLinesComponent', 'selector': 'app-colored-lines'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PortfolioComponent', 'selector': 'app-portfolio'},{'name': 'TechnologyComponent', 'selector': 'app-technology'},{'name': 'TrianglesComponent', 'selector': 'app-triangles'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LogoComponent'};

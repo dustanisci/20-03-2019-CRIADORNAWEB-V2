@@ -8,8 +8,6 @@ import { TrianglesModule } from './component/triangles/triangles.module';
 import { BannerComponent } from './component/banner/banner.component';
 import { ModalComponent } from './component/modal/modal.component';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-
 
 @NgModule({
   declarations: [
@@ -24,7 +22,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FlexLayoutModule,
     TrianglesModule, 
     GalleryModule,
-    BrowserAnimationsModule
   ],
   exports: [
     FooterComponent,

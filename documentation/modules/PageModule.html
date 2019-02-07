@@ -279,7 +279,6 @@ import { AppRoutingModule } from &#x27;../app-routing.module&#x27;;
 import { SharedModule } from &#x27;../shared/shared.module&#x27;;
 import { PortfolioService } from &#x27;./portfolio/portfolio.service&#x27;;
 import { HttpClientModule } from &#x27;@angular/common/http&#x27;;
-import { Portfolio } from &#x27;../shared/model/portfolio&#x27;;
 import { PipeModule } from &#x27;../shared/pipe/pipe.module&#x27;;
 import { FormsModule, FormBuilder, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
 
@@ -300,7 +299,8 @@ import { FormsModule, FormBuilder, ReactiveFormsModule } from &#x27;@angular/for
     HttpClientModule,
     PipeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   providers: [
     PortfolioService,

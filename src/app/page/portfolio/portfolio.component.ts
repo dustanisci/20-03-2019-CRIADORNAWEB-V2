@@ -14,7 +14,7 @@ import { NavbarComponent } from 'src/app/shared/component/header/navbar/navbar.c
 
 export class PortfolioComponent {
 
-  @ViewChild(ModalComponent) 'modal';
+  @ViewChild(ModalComponent) 'modal' : ModalComponent;
   public projetos:Portfolio;
   gallery: Object;
 

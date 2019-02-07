@@ -112,24 +112,6 @@
 </section>
 
 
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/page/home/home.component.ts:8</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
 
 
@@ -141,16 +123,15 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
 @Component({
   selector: &#x27;app-home&#x27;,
   templateUrl: &#x27;./home.component.html&#x27;,
-  styleUrls: [&#x27;./home.component.scss&#x27;]
+  styleUrls: [&#x27;./home.component.scss&#x27;],
 })
 export class HomeComponent {
 
-  constructor() { }
 
 }</code></pre>
     </div>
@@ -158,10 +139,10 @@ export class HomeComponent {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;min-height-100&quot;&gt;
   &lt;div class&#x3D;&quot;container padding-t-240 padding-xl-tp-10&quot;&gt;
-
+      
     &lt;div class&#x3D;&quot;txt-center&quot;&gt;
       &lt;main fxLayout.lt-md&#x3D;&quot;column&quot; fxLayoutGap.lt-md&#x3D;&quot;70px&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutGap.gt-sm&#x3D;&quot;15%&quot;&gt;
-        &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;fade-up&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
           &lt;h2 class&#x3D;&quot;position-re margin-b-30 margin-t-100 f-size-title&quot;&gt;
             &lt;app-triangles&gt;&lt;/app-triangles&gt;
             Sites
@@ -172,7 +153,7 @@ export class HomeComponent {
             &lt;p&gt;com boa usabilidade e tecnologias atuais do mercado.&lt;/p&gt;
           &lt;/content&gt;
         &lt;/div&gt;
-        &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;fade-down&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
           &lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;assets/img/img-sites-sistemas.jpg&quot; /&gt;
         &lt;/div&gt;
       &lt;/main&gt;
@@ -180,10 +161,10 @@ export class HomeComponent {
 
     &lt;div class&#x3D;&quot;txt-center margin-t-150&quot;&gt;
       &lt;main fxLayout.lt-md&#x3D;&quot;column-reverse&quot; fxLayoutGap.lt-md&#x3D;&quot;70px&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutGap.gt-sm&#x3D;&quot;15%&quot;&gt;
-        &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;fade-down&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
           &lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;assets/img/img-prototipo.jpg&quot; /&gt;
         &lt;/div&gt;
-        &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;fade-up&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
           &lt;h2 class&#x3D;&quot;position-re margin-b-30 margin-t-100 f-size-title&quot;&gt;
             &lt;app-triangles&gt;&lt;/app-triangles&gt;
             Protótipo
@@ -198,7 +179,7 @@ export class HomeComponent {
 
     &lt;div class&#x3D;&quot;txt-center margin-t-150&quot;&gt;
       &lt;main fxLayout.lt-md&#x3D;&quot;column&quot; fxLayoutGap.lt-md&#x3D;&quot;70px&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutGap.gt-sm&#x3D;&quot;15%&quot;&gt;
-        &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;fade-down&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
           &lt;h2 class&#x3D;&quot;position-re margin-b-30 margin-t-100 f-size-title&quot;&gt;
             &lt;app-triangles&gt;&lt;/app-triangles&gt;
             Responsivo
@@ -210,7 +191,7 @@ export class HomeComponent {
             &lt;p&gt;de pequenas e grandes telas.&lt;/p&gt;
           &lt;/content&gt;
         &lt;/div&gt;
-        &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;fade-up&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
           &lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;assets/img/img-responsivo.jpg&quot; /&gt;
         &lt;/div&gt;
       &lt;/main&gt;
@@ -218,10 +199,10 @@ export class HomeComponent {
 
     &lt;div class&#x3D;&quot;txt-center margin-t-150&quot;&gt;
       &lt;main fxLayout.lt-md&#x3D;&quot;column-reverse&quot; fxLayoutGap.lt-md&#x3D;&quot;70px&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutGap.gt-sm&#x3D;&quot;15%&quot;&gt;
-        &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;fade-down&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
           &lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;assets/img/img-suporte.jpg&quot; /&gt;
         &lt;/div&gt;
-        &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;fade-up&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
           &lt;h2 class&#x3D;&quot;position-re margin-b-30 margin-t-100 f-size-title&quot;&gt;
             &lt;app-triangles&gt;&lt;/app-triangles&gt;
             Manutenção
@@ -237,7 +218,7 @@ export class HomeComponent {
 
     &lt;div class&#x3D;&quot;txt-center margin-t-150&quot; fxLayout&#x3D;&quot;row&quot; fxLayout.lt-md&#x3D;&quot;column&quot; fxLayoutGap.lt-md&#x3D;&quot;40px&quot;
       fxLayoutGap.gt-sm&#x3D;&quot;15%&quot;&gt;
-      &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+      &lt;div data-aos&#x3D;&quot;fade-down&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
         &lt;h2 class&#x3D;&quot;position-re margin-b-30 margin-t-100 f-size-title&quot;&gt;
           &lt;app-triangles&gt;&lt;/app-triangles&gt;
           Consultoria
@@ -248,17 +229,17 @@ export class HomeComponent {
           &lt;p&gt;ainda mais o seu negócio.&lt;/p&gt;
         &lt;/content&gt;
       &lt;/div&gt;
-      &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+      &lt;div data-aos&#x3D;&quot;fade-up&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
         &lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;assets/img/img-consultoria.jpg&quot; /&gt;
       &lt;/div&gt;
     &lt;/div&gt;
 
     &lt;div class&#x3D;&quot;txt-center margin-t-150 margin-b-150&quot;&gt;
       &lt;main fxLayout.lt-md&#x3D;&quot;column-reverse&quot; fxLayoutGap.lt-md&#x3D;&quot;70px&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutGap.gt-sm&#x3D;&quot;15%&quot;&gt;
-        &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;fade-down&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
           &lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;assets/img/img-servicos-extras.jpg&quot; /&gt;
         &lt;/div&gt;
-        &lt;div fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;fade-up&quot; data-aos-once&#x3D;&quot;true&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
           &lt;h2 class&#x3D;&quot;position-re margin-b-30 margin-t-100 f-size-title&quot;&gt;
             &lt;app-triangles&gt;&lt;/app-triangles&gt;
             Serviços Extras
@@ -337,7 +318,7 @@ app-triangles {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="min-height-100">  <div class="container padding-t-240 padding-xl-tp-10">    <div class="txt-center">      <main fxLayout.lt-md="column" fxLayoutGap.lt-md="70px" fxLayout="row" fxLayoutGap.gt-sm="15%">        <div fxFlex.gt-sm="50">          <h2 class="position-re margin-b-30 margin-t-100 f-size-title">            <app-triangles></app-triangles>            Sites          </h2>          <content>            <p>Podemos criar um do zero para você.</p>            <p>Nossos sites e sistemas são leves,</p>            <p>com boa usabilidade e tecnologias atuais do mercado.</p>          </content>        </div>        <div fxFlex.gt-sm="50">          <img class="img-responsive" src="assets/img/img-sites-sistemas.jpg" />        </div>      </main>    </div>    <div class="txt-center margin-t-150">      <main fxLayout.lt-md="column-reverse" fxLayoutGap.lt-md="70px" fxLayout="row" fxLayoutGap.gt-sm="15%">        <div fxFlex.gt-sm="50">          <img class="img-responsive" src="assets/img/img-prototipo.jpg" />        </div>        <div fxFlex.gt-sm="50">          <h2 class="position-re margin-b-30 margin-t-100 f-size-title">            <app-triangles></app-triangles>            Protótipo          </h2>          <content>            <p>Deixe as complicações e limitações de lado,</p>            <p>a construção é elaborada do jeitinho que você deseja.</p>          </content>        </div>      </main>    </div>    <div class="txt-center margin-t-150">      <main fxLayout.lt-md="column" fxLayoutGap.lt-md="70px" fxLayout="row" fxLayoutGap.gt-sm="15%">        <div fxFlex.gt-sm="50">          <h2 class="position-re margin-b-30 margin-t-100 f-size-title">            <app-triangles></app-triangles>            Responsivo          </h2>          <content>            <p>O site e o sistema é compatível com o computador,</p>            <p>celular, tablet e até mesmo televisores.</p>            <p>Não tendo que se preocupar com a usabilidade</p>            <p>de pequenas e grandes telas.</p>          </content>        </div>        <div fxFlex.gt-sm="50">          <img class="img-responsive" src="assets/img/img-responsivo.jpg" />        </div>      </main>    </div>    <div class="txt-center margin-t-150">      <main fxLayout.lt-md="column-reverse" fxLayoutGap.lt-md="70px" fxLayout="row" fxLayoutGap.gt-sm="15%">        <div fxFlex.gt-sm="50">          <img class="img-responsive" src="assets/img/img-suporte.jpg" />        </div>        <div fxFlex.gt-sm="50">          <h2 class="position-re margin-b-30 margin-t-100 f-size-title">            <app-triangles></app-triangles>            Manutenção          </h2>          <content>            <p>Também podemos fornecer os nossos serviços</p>            <p>em sites e sistemas já existentes.</p>            <p>Consulte as tecnologias que utilizamos e solicite o orçamento!</p>          </content>        </div>      </main>    </div>    <div class="txt-center margin-t-150" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="40px"      fxLayoutGap.gt-sm="15%">      <div fxFlex.gt-sm="50">        <h2 class="position-re margin-b-30 margin-t-100 f-size-title">          <app-triangles></app-triangles>          Consultoria        </h2>        <content>          <p>Fornecemos soluções completas com ideias,</p>          <p>inovação, assuntos que enriqueçam</p>          <p>ainda mais o seu negócio.</p>        </content>      </div>      <div fxFlex.gt-sm="50">        <img class="img-responsive" src="assets/img/img-consultoria.jpg" />      </div>    </div>    <div class="txt-center margin-t-150 margin-b-150">      <main fxLayout.lt-md="column-reverse" fxLayoutGap.lt-md="70px" fxLayout="row" fxLayoutGap.gt-sm="15%">        <div fxFlex.gt-sm="50">          <img class="img-responsive" src="assets/img/img-servicos-extras.jpg" />        </div>        <div fxFlex.gt-sm="50">          <h2 class="position-re margin-b-30 margin-t-100 f-size-title">            <app-triangles></app-triangles>            Serviços Extras          </h2>          <content>            <p>Se você é um programador e tem dificuldades ou</p>            <p>falta de tempo de criar um componente</p>            <p>do layout, podemos criar</p>            <p>um personalizado para você e rápido.</p>          </content>        </div>      </main>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="min-height-100">  <div class="container padding-t-240 padding-xl-tp-10">          <div class="txt-center">      <main fxLayout.lt-md="column" fxLayoutGap.lt-md="70px" fxLayout="row" fxLayoutGap.gt-sm="15%">        <div data-aos="fade-up" data-aos-once="true" fxFlex.gt-sm="50">          <h2 class="position-re margin-b-30 margin-t-100 f-size-title">            <app-triangles></app-triangles>            Sites          </h2>          <content>            <p>Podemos criar um do zero para você.</p>            <p>Nossos sites e sistemas são leves,</p>            <p>com boa usabilidade e tecnologias atuais do mercado.</p>          </content>        </div>        <div data-aos="fade-down" data-aos-once="true" fxFlex.gt-sm="50">          <img class="img-responsive" src="assets/img/img-sites-sistemas.jpg" />        </div>      </main>    </div>    <div class="txt-center margin-t-150">      <main fxLayout.lt-md="column-reverse" fxLayoutGap.lt-md="70px" fxLayout="row" fxLayoutGap.gt-sm="15%">        <div data-aos="fade-down" data-aos-once="true" fxFlex.gt-sm="50">          <img class="img-responsive" src="assets/img/img-prototipo.jpg" />        </div>        <div data-aos="fade-up" data-aos-once="true" fxFlex.gt-sm="50">          <h2 class="position-re margin-b-30 margin-t-100 f-size-title">            <app-triangles></app-triangles>            Protótipo          </h2>          <content>            <p>Deixe as complicações e limitações de lado,</p>            <p>a construção é elaborada do jeitinho que você deseja.</p>          </content>        </div>      </main>    </div>    <div class="txt-center margin-t-150">      <main fxLayout.lt-md="column" fxLayoutGap.lt-md="70px" fxLayout="row" fxLayoutGap.gt-sm="15%">        <div data-aos="fade-down" data-aos-once="true" fxFlex.gt-sm="50">          <h2 class="position-re margin-b-30 margin-t-100 f-size-title">            <app-triangles></app-triangles>            Responsivo          </h2>          <content>            <p>O site e o sistema é compatível com o computador,</p>            <p>celular, tablet e até mesmo televisores.</p>            <p>Não tendo que se preocupar com a usabilidade</p>            <p>de pequenas e grandes telas.</p>          </content>        </div>        <div data-aos="fade-up" data-aos-once="true" fxFlex.gt-sm="50">          <img class="img-responsive" src="assets/img/img-responsivo.jpg" />        </div>      </main>    </div>    <div class="txt-center margin-t-150">      <main fxLayout.lt-md="column-reverse" fxLayoutGap.lt-md="70px" fxLayout="row" fxLayoutGap.gt-sm="15%">        <div data-aos="fade-down" data-aos-once="true" fxFlex.gt-sm="50">          <img class="img-responsive" src="assets/img/img-suporte.jpg" />        </div>        <div data-aos="fade-up" data-aos-once="true" fxFlex.gt-sm="50">          <h2 class="position-re margin-b-30 margin-t-100 f-size-title">            <app-triangles></app-triangles>            Manutenção          </h2>          <content>            <p>Também podemos fornecer os nossos serviços</p>            <p>em sites e sistemas já existentes.</p>            <p>Consulte as tecnologias que utilizamos e solicite o orçamento!</p>          </content>        </div>      </main>    </div>    <div class="txt-center margin-t-150" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="40px"      fxLayoutGap.gt-sm="15%">      <div data-aos="fade-down" data-aos-once="true" fxFlex.gt-sm="50">        <h2 class="position-re margin-b-30 margin-t-100 f-size-title">          <app-triangles></app-triangles>          Consultoria        </h2>        <content>          <p>Fornecemos soluções completas com ideias,</p>          <p>inovação, assuntos que enriqueçam</p>          <p>ainda mais o seu negócio.</p>        </content>      </div>      <div data-aos="fade-up" data-aos-once="true" fxFlex.gt-sm="50">        <img class="img-responsive" src="assets/img/img-consultoria.jpg" />      </div>    </div>    <div class="txt-center margin-t-150 margin-b-150">      <main fxLayout.lt-md="column-reverse" fxLayoutGap.lt-md="70px" fxLayout="row" fxLayoutGap.gt-sm="15%">        <div data-aos="fade-down" data-aos-once="true" fxFlex.gt-sm="50">          <img class="img-responsive" src="assets/img/img-servicos-extras.jpg" />        </div>        <div data-aos="fade-up" data-aos-once="true" fxFlex.gt-sm="50">          <h2 class="position-re margin-b-30 margin-t-100 f-size-title">            <app-triangles></app-triangles>            Serviços Extras          </h2>          <content>            <p>Se você é um programador e tem dificuldades ou</p>            <p>falta de tempo de criar um componente</p>            <p>do layout, podemos criar</p>            <p>um personalizado para você e rápido.</p>          </content>        </div>      </main>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlackLinesComponent', 'selector': 'app-black-lines'},{'name': 'ColoredLinesComponent', 'selector': 'app-colored-lines'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PortfolioComponent', 'selector': 'app-portfolio'},{'name': 'TechnologyComponent', 'selector': 'app-technology'},{'name': 'TrianglesComponent', 'selector': 'app-triangles'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};

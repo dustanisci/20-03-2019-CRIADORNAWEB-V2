@@ -171,7 +171,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/page/contact/contact.component.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/page/contact/contact.component.ts:23</a></div>
                             </td>
                         </tr>
 
@@ -240,7 +240,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/page/contact/contact.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/page/contact/contact.component.ts:27</a></div>
                             </td>
                         </tr>
 
@@ -291,7 +291,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/page/contact/contact.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/page/contact/contact.component.ts:23</a></div>
                             </td>
                         </tr>
 
@@ -306,11 +306,24 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { trigger, state, style, animate, transition } from &#x27;@angular/animations&#x27;;
 
 @Component({
   selector: &#x27;app-contact&#x27;,
   templateUrl: &#x27;./contact.component.html&#x27;,
-  styleUrls: [&#x27;./contact.component.scss&#x27;]
+  styleUrls: [&#x27;./contact.component.scss&#x27;],
+  animations: [
+    trigger(&#x27;scrollAnimation&#x27;, [
+      state(&#x27;show&#x27;, style({
+        opacity: 1
+      })),
+      state(&#x27;hide&#x27;, style({
+        opacity: 0
+      })),
+      transition(&#x27;show &#x3D;&gt; hide&#x27;, animate(&#x27;700ms ease-out&#x27;)),
+      transition(&#x27;hide &#x3D;&gt; show&#x27;, animate(&#x27;700ms ease-in&#x27;))
+    ])
+  ]
 })
 export class ContactComponent implements OnInit {
   public formWhats: FormGroup;
@@ -331,12 +344,12 @@ export class ContactComponent implements OnInit {
   &lt;div class&#x3D;&quot;container padding-t-150 padding-xl-tp-10&quot;&gt;
 
     &lt;div fxLayout&#x3D;&quot;row&quot; class&#x3D;&quot;margin-b-75&quot;&gt;
-      &lt;app-banner linkPage&#x3D;&quot;&quot; urlImage&#x3D;&quot;./assets/img/banner-contato.jpg&quot; fxFlex&#x3D;&quot;100&quot;&gt;&lt;/app-banner&gt;
+      &lt;app-banner data-aos&#x3D;&quot;fade-right&quot; data-aos-once&#x3D;&quot;true&quot; linkPage&#x3D;&quot;&quot; urlImage&#x3D;&quot;./assets/img/banner-contato.jpg&quot; fxFlex&#x3D;&quot;100&quot;&gt;&lt;/app-banner&gt;
     &lt;/div&gt;
 
     &lt;content class&#x3D;&quot;margin-t-50&quot; fxLayout&#x3D;&quot;row wrap&quot; fxLayout.lt-md&#x3D;&quot;column&quot; fxLayoutGap&#x3D;&quot;auto&quot; fxLayoutGap.lt-md&#x3D;&quot;120px&quot;&gt;
       &lt;div fxLayoutGap&#x3D;&quot;20px&quot; fxLayout&#x3D;&quot;column&quot; fxFlex.lt-md&#x3D;&quot;100&quot; fxFlex.gt-sm&#x3D;&quot;50&quot;&gt;
-        &lt;div class&#x3D;&quot;content-center&quot; id&#x3D;&quot;phone&quot;&gt;
+        &lt;div data-aos&#x3D;&quot;flip-left&quot; data-aos-once&#x3D;&quot;true&quot; class&#x3D;&quot;content-center&quot; id&#x3D;&quot;phone&quot;&gt;
           &lt;div id&#x3D;&quot;whats-header&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;&lt;/div&gt;
 
           &lt;div id&#x3D;&quot;whats-body&quot; fxLayout&#x3D;&quot;row&quot;&gt;
@@ -354,7 +367,7 @@ export class ContactComponent implements OnInit {
         &lt;/div&gt;
       &lt;/div&gt;
 
-      &lt;div fxLayoutGap&#x3D;&quot;20px&quot; fxLayout&#x3D;&quot;column&quot; fxFlex.lt-md&#x3D;&quot;100&quot; fxFlex.gt-sm&#x3D;&quot;50&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+      &lt;div data-aos&#x3D;&quot;fade-left&quot; data-aos-once&#x3D;&quot;true&quot; fxLayoutGap&#x3D;&quot;20px&quot; fxLayout&#x3D;&quot;column&quot; fxFlex.lt-md&#x3D;&quot;100&quot; fxFlex.gt-sm&#x3D;&quot;50&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
         &lt;label&gt;Digite sua mensagem ou aperte no ícone abaixo&lt;/label&gt;
         &lt;a class&#x3D;&quot;txt-decoration-none content-center&quot; fxLayout&#x3D;&quot;column&quot; href&#x3D;&quot;tel:+5511998758662&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
           &lt;img fxFlex&#x3D;&quot;100&quot; src&#x3D;&quot;assets/img/img-whats.png&quot; /&gt;
@@ -468,7 +481,7 @@ img{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="min-height-100 margin-b-120">  <div class="container padding-t-150 padding-xl-tp-10">    <div fxLayout="row" class="margin-b-75">      <app-banner linkPage="" urlImage="./assets/img/banner-contato.jpg" fxFlex="100"></app-banner>    </div>    <content class="margin-t-50" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="auto" fxLayoutGap.lt-md="120px">      <div fxLayoutGap="20px" fxLayout="column" fxFlex.lt-md="100" fxFlex.gt-sm="50">        <div class="content-center" id="phone">          <div id="whats-header" fxLayoutAlign="center center"></div>          <div id="whats-body" fxLayout="row">                        <form [formGroup]="formWhats" id="whats-send" fxLayoutAlign="end end">              <textarea ngModel formControlName="textWhats" class="d-inline" placeholder="Digite sua mensagem"></textarea>              <div class="d-inline-block margin-l-10">                <a href="https://api.whatsapp.com/send?phone=5511959662923&text={{ formWhats.value.textWhats }}" target="_blank" class="send" fxLayoutAlign="center center">                  <i class="material-icons">send</i>                </a>              </div>            </form>          </div>        </div>      </div>      <div fxLayoutGap="20px" fxLayout="column" fxFlex.lt-md="100" fxFlex.gt-sm="50" fxLayoutAlign="center center">        <label>Digite sua mensagem ou aperte no ícone abaixo</label>        <a class="txt-decoration-none content-center" fxLayout="column" href="tel:+5511998758662" fxLayoutAlign="center center">          <img fxFlex="100" src="assets/img/img-whats.png" />          <label class="cursor-pointer" fxFlex="100">(11) 95966-2923</label>        </a>      </div>    </content>      </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="min-height-100 margin-b-120">  <div class="container padding-t-150 padding-xl-tp-10">    <div fxLayout="row" class="margin-b-75">      <app-banner data-aos="fade-right" data-aos-once="true" linkPage="" urlImage="./assets/img/banner-contato.jpg" fxFlex="100"></app-banner>    </div>    <content class="margin-t-50" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="auto" fxLayoutGap.lt-md="120px">      <div fxLayoutGap="20px" fxLayout="column" fxFlex.lt-md="100" fxFlex.gt-sm="50">        <div data-aos="flip-left" data-aos-once="true" class="content-center" id="phone">          <div id="whats-header" fxLayoutAlign="center center"></div>          <div id="whats-body" fxLayout="row">                        <form [formGroup]="formWhats" id="whats-send" fxLayoutAlign="end end">              <textarea ngModel formControlName="textWhats" class="d-inline" placeholder="Digite sua mensagem"></textarea>              <div class="d-inline-block margin-l-10">                <a href="https://api.whatsapp.com/send?phone=5511959662923&text={{ formWhats.value.textWhats }}" target="_blank" class="send" fxLayoutAlign="center center">                  <i class="material-icons">send</i>                </a>              </div>            </form>          </div>        </div>      </div>      <div data-aos="fade-left" data-aos-once="true" fxLayoutGap="20px" fxLayout="column" fxFlex.lt-md="100" fxFlex.gt-sm="50" fxLayoutAlign="center center">        <label>Digite sua mensagem ou aperte no ícone abaixo</label>        <a class="txt-decoration-none content-center" fxLayout="column" href="tel:+5511998758662" fxLayoutAlign="center center">          <img fxFlex="100" src="assets/img/img-whats.png" />          <label class="cursor-pointer" fxFlex="100">(11) 95966-2923</label>        </a>      </div>    </content>      </div></div></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlackLinesComponent', 'selector': 'app-black-lines'},{'name': 'ColoredLinesComponent', 'selector': 'app-colored-lines'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PortfolioComponent', 'selector': 'app-portfolio'},{'name': 'TechnologyComponent', 'selector': 'app-technology'},{'name': 'TrianglesComponent', 'selector': 'app-triangles'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContactComponent'};

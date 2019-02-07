@@ -2,11 +2,11 @@
   <div class="container padding-t-175 padding-xl-tp-10 margin-b-50">
 
     <main fxLayout.lt-md="column" fxLayoutGap.lt-md="30px" fxLayout="row" fxLayoutGap.gt-sm="15%" fxLayoutAlign="start center">
-      <div fxFlex.gt-sm="50">
-        <img [@scrollAnimation]="state" src="assets/img/img-sobre.jpg" class="img-responsive" />
+      <div data-aos="fade-right" data-aos-once="true" fxFlex.gt-sm="50">
+        <img src="assets/img/img-sobre.jpg" class="img-responsive" />
       </div>
 
-      <content [@scrollAnimation]="state" class="txt-left" fxFlex.gt-sm="50">
+      <content data-aos="fade-left" data-aos-once="true" class="txt-left" fxFlex.gt-sm="50">
         <p>Criador na web surgiu com o propósito de ajudá-lo em seus negócios, fornecendo serviços de sites de
           excelente qualidade e consultoria em seu ambiente de trabalho.</p>
 
@@ -15,7 +15,6 @@
         <p>Os nossos valores envolvem o comprometimento com o cliente, a integridade no que fazemos, proatividade,
           moral e a ética.</p>
       </content>
-
       
     </main>
 

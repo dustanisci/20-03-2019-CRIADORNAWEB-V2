@@ -2,11 +2,11 @@
   <div class="container padding-t-150 padding-xl-tp-10">
 
     <div fxLayout="row" class="margin-b-75">
-      <app-banner linkPage="" urlImage="./assets/img/banner-portfolio.jpg" fxFlex="100"></app-banner>
+      <app-banner data-aos="fade-right" data-aos-once="true" linkPage="" urlImage="./assets/img/banner-portfolio.jpg" fxFlex="100"></app-banner>
     </div>
 
     <content class="margin-t-50" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="auto" fxLayoutGap.lt-md="120px">
-      <div class="margin-b-135 txt-center content-center" *ngFor="let projeto of projetos | reverse; let i = index;"
+      <div data-aos="fade-up" data-aos-once="true" class="margin-b-135 txt-center content-center" *ngFor="let projeto of projetos | reverse; let i = index;"
         fxFlex.lt-md="100" fxFlex.gt-sm="40">
         <img (click)="setValuesModal(projeto.galerias);" src="{{ projeto.galerias[0].url_galeria }}" class="cursor-pointer img-responsive" />
         <label class="d-block margin-t-20">Imagem (1 de {{projeto.galerias
