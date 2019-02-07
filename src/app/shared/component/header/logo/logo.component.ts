@@ -7,7 +7,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent implements OnInit {
-  constructor(private navbar: NavbarComponent) {
+  constructor(public navbar: NavbarComponent) {
   }
 
   ngOnInit() {

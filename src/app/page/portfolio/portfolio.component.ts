@@ -21,7 +21,7 @@ export class PortfolioComponent {
 
   constructor(
     private portfolioService: PortfolioService,
-    private navbar:NavbarComponent) {
+    public navbar:NavbarComponent) {
 
     this.getProject();
   }
