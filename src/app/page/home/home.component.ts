@@ -8,7 +8,7 @@ import { NavbarComponent } from 'src/app/shared/component/header/navbar/navbar.c
 })
 export class HomeComponent {
 
-  constructor(private navbar:NavbarComponent){
+  constructor(public navbar:NavbarComponent){
 
   }
 }
