@@ -7,7 +7,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TrianglesModule } from './component/triangles/triangles.module';
 import { BannerComponent } from './component/banner/banner.component';
 import { ModalComponent } from './component/modal/modal.component';
-import { GalleryModule } from '@ks89/angular-modal-gallery';
+import { PipeModule } from './pipe/pipe.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BlackLinesModule } from './component/black-lines/black-lines.module';
+import {GalleryModule} from '@ks89/angular-modal-gallery';
+
 
 @NgModule({
   declarations: [
@@ -17,11 +22,12 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
   ],
   imports: [
     CommonModule,
-    HeaderModule,
     AppRoutingModule,
+    HeaderModule,
     FlexLayoutModule,
     TrianglesModule, 
     GalleryModule,
+    
   ],
   exports: [
     FooterComponent,
@@ -29,6 +35,15 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
     TrianglesModule,
     BannerComponent,
     ModalComponent,
+    PipeModule,
+    HttpClientModule,
+    FlexLayoutModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BlackLinesModule,
+    FlexLayoutModule,
+    
   ]
 })
 export class SharedModule { }

@@ -1,10 +1,6 @@
 <div class="min-height-100 margin-b-120">
   <div class="container padding-t-150 padding-xl-tp-10">
 
-    <div fxLayout="row" class="margin-b-75">
-      <app-banner data-aos="fade-right" data-aos-once="true" linkPage="" urlImage="./assets/img/banner-contato.jpg" fxFlex="100"></app-banner>
-    </div>
-
     <content class="margin-t-50" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="auto" fxLayoutGap.lt-md="120px">
       <div fxLayoutGap="20px" fxLayout="column" fxFlex.lt-md="100" fxFlex.gt-sm="50">
         <div data-aos="flip-left" data-aos-once="true" class="content-center" id="phone">
@@ -13,7 +9,7 @@
           <div id="whats-body" fxLayout="row">
             
             <form [formGroup]="formWhats" id="whats-send" fxLayoutAlign="end end">
-              <textarea ngModel formControlName="textWhats" class="d-inline" placeholder="Digite sua mensagem"></textarea>
+              <textarea formControlName="textWhats" class="d-inline" placeholder="Digite sua mensagem"></textarea>
               <div class="d-inline-block margin-l-10">
                 <a href="https://api.whatsapp.com/send?phone=5511959662923&text={{ formWhats.value.textWhats }}" target="_blank" class="send" fxLayoutAlign="center center">
                   <i class="material-icons">send</i>

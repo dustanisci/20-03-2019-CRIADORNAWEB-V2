@@ -27,6 +27,6 @@ import { ColoredLinesModule } from '../colored-lines/colored-lines.module';
   exports: [
     NavbarComponent,
     HeaderComponent
-  ]
+  ],
 })
 export class HeaderModule { }

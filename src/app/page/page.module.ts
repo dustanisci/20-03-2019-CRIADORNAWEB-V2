@@ -20,18 +20,9 @@ import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     PortfolioComponent,
     TechnologyComponent,
-
   ],
   imports: [
-    CommonModule,
-    FlexLayoutModule,
-    AppRoutingModule,
     SharedModule,
-    HttpClientModule,
-    PipeModule,
-    FormsModule,
-    ReactiveFormsModule,
-    
   ],
   providers: [
     PortfolioService,
