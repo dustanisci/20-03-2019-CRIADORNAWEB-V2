@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ModalComponent } from './modal.component';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 describe('ModalComponent', () => {
   let component: ModalComponent;
@@ -8,7 +9,8 @@ describe('ModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalComponent ]
+      imports : [GalleryModule.forRoot()],
+      declarations: [ ModalComponent ],
     })
     .compileComponents();
   }));

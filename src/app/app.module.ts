@@ -17,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
     PageModule,
     SharedModule,
     GalleryModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule  
     
   ],
   providers: [],

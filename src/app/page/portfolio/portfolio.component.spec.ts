@@ -7,6 +7,10 @@ import { TrianglesComponent } from 'src/app/shared/component/triangles/triangles
 import { NavbarComponent } from 'src/app/shared/component/header/navbar/navbar.component';
 import { PipeModule } from 'src/app/shared/pipe/pipe.module';
 import { ModalComponent } from 'src/app/shared/component/modal/modal.component';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
+import { PortfolioService } from './portfolio.service';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('PortfolioComponent', () => {
   let component: PortfolioComponent;
@@ -14,11 +18,11 @@ describe('PortfolioComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, PipeModule],
-      declarations: [ PortfolioComponent, BannerComponent, TrianglesComponent, ModalComponent ],
-      providers : [NavbarComponent]
+      imports: [RouterTestingModule, PipeModule, GalleryModule.forRoot(), HttpClientModule, BrowserModule],
+      declarations: [PortfolioComponent, BannerComponent, TrianglesComponent, ModalComponent],
+      providers: [PortfolioService, NavbarComponent, HttpClientModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
