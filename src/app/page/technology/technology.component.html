@@ -1,12 +1,13 @@
-<div class="min-height-100 margin-b-120">
-  <main class="container padding-t-150 padding-xl-tp-10" fxLayout="column" fxLayoutGap="75px">
+<div class="min-height-100">
+  <main class="container padding-t-150 padding-xl-tp-10">
 
-    <div fxLayout="row">
-      <app-banner data-aos="fade-right" data-aos-once="true" linkPage="{{ navbar.items['5-contact'][0].url }}" urlImage="./assets/img/banner-tecnologias.jpg" fxFlex="100"></app-banner>
+    <div fxLayout="row" class="margin-b-75">
+      <app-banner data-aos="fade-right" data-aos-once="true" linkPage="{{ navbar.items['5-contact'][0].url }}" urlImage="./assets/img/banner-tecnologias.jpg"
+        fxFlex="100"></app-banner>
     </div>
 
-    <content class="txt-center" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="120px">
-      <div data-aos="zoom-out-left" data-aos-once="true" fxFlex.gt-sm="33.33" fxFlex.lt-md="100">
+    <content class="margin-t-50" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="auto" fxLayoutGap.lt-md="120px">
+      <div data-aos="zoom-out-left" data-aos-once="true" class="margin-b-135 txt-center content-center" fxFlex.lt-md="100">
         <h2 class="f-size-title margin-0">Back-end</h2>
         <h3 class="f-size-subtitle margin-0">(Parte funcional)</h3>
         <ul class="list padding-b-50" fxLayoutGap="10px" fxLayout="column">
@@ -20,7 +21,7 @@
         <app-triangles></app-triangles>
       </div>
 
-      <div data-aos="zoom-out-left" data-aos-once="true" fxFlex.gt-sm="33.33" fxFlex.lt-md="100">
+      <div data-aos="zoom-out-left" data-aos-once="true" class="margin-b-135 txt-center content-center" fxFlex.lt-md="100">
         <h2 class="f-size-title margin-0">Front-end</h2>
         <h3 class="f-size-subtitle margin-0">(Parte funcional e visual)</h3>
         <ul class="list padding-b-50" fxLayoutGap="10px" fxLayout="column">
@@ -42,7 +43,7 @@
         <app-triangles></app-triangles>
       </div>
 
-      <div data-aos="zoom-out-left" data-aos-once="true" fxFlex.gt-sm="33.33" fxFlex.lt-md="100">
+      <div data-aos="zoom-out-left" data-aos-once="true" class="margin-b-135 txt-center content-center" fxFlex.lt-md="100">
         <h2 class="f-size-title margin-0">Banco de dados</h2>
         <h3 class="f-size-subtitle margin-0">(Armazenamento de informações)</h3>
         <ul class="list padding-b-50" fxLayoutGap="10px" fxLayout="column">
@@ -55,6 +56,5 @@
         <app-triangles></app-triangles>
       </div>
     </content>
-
   </main>
 </div>

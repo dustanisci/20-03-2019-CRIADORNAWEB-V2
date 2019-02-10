@@ -1,0 +1,13 @@
+content {
+  >div:first-child {
+    @media only screen and (max-width: 1279px) {
+      margin-bottom: 50px !important;
+    }
+  }
+
+  p {
+    @media only screen and (max-width: 1279px) {
+      text-align: center;
+    }
+  }
+}

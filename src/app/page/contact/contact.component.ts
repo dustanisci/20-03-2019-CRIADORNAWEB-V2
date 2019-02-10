@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -21,7 +22,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class ContactComponent implements OnInit {
   public formWhats: FormGroup;
-
+  public environment = environment.apiWhatsapp;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
