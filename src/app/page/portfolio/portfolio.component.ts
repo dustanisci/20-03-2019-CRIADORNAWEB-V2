@@ -62,4 +62,8 @@ export class PortfolioComponent {
       );
   }
 
+  public getLengthProject(portfolio){
+    return portfolio.length;
+  }
+
 }
