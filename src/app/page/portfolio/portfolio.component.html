@@ -14,6 +14,8 @@
         <a class="txt-decoration-none margin-t-5 d-block" href="{{ projeto.url_site_projeto }}" target="_blank">{{projeto["url_site_projeto"]
           | www}}</a>
       </div>
+
+      <div class="margin-b-135 txt-center content-center" fxFlex.lt-md="100" fxFlex.gt-sm="40" *ngIf="projetos?.length / 2 != 0"></div>
     </content>
 
     <app-modal class="position-ab"></app-modal>
