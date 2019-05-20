@@ -1,14 +1,22 @@
 div {
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right center;
-  height: 200px;
+  background-size: 100%;
+  background-position: center center;
+  height:300px;
 
-  @media only screen and (min-width: 2000px) {
-    height: 400px;
+  @media only screen and (max-width: 1278px) {
+    background-size: cover;
+    background-position: right center;
+    height: 200px;
   }
 
   @media only screen and (max-width: 599px) {
     height: 100px;
+  }
+
+  @media only screen and (min-width: 2200px) {
+    background-size: cover;
+    background-position: right center;
+    height:500px;
   }
 }
