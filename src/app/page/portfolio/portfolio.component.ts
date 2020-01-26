@@ -63,7 +63,7 @@ export class PortfolioComponent {
   }
 
   public getLengthProject(portfolio){
-    return portfolio.length;
+    return portfolio ? portfolio.length : 0;
   }
 
 }
