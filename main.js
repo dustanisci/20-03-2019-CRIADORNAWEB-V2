@@ -527,7 +527,7 @@ var PortfolioComponent = /** @class */ (function () {
         });
     };
     PortfolioComponent.prototype.getLengthProject = function (portfolio) {
-        return portfolio.length;
+        return portfolio ? portfolio.length : 0;
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(src_app_shared_component_modal_modal_component__WEBPACK_IMPORTED_MODULE_4__["ModalComponent"]),
@@ -2004,7 +2004,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    apiPortfolio: "http://criadornaweb.com.br/servicos/webservice/view/listarprojetos.php",
+    apiPortfolio: "http://www.mocky.io/v2/5e2cda03310000c54e267fbc",
     apiWhatsapp: "https://api.whatsapp.com/send?phone=5511959662923&text="
 };
 /*
