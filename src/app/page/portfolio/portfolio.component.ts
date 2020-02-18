@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component,  ViewChild } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { PortfolioService } from './portfolio.service';
 import { Portfolio } from 'src/app/shared/model/portfolio';
 import { ModalComponent } from 'src/app/shared/component/modal/modal.component';
 import { Image } from '@ks89/angular-modal-gallery';
-import { NavbarComponent } from 'src/app/shared/component/header/navbar/navbar.component';
+import { Gallery } from 'src/app/shared/model/Gallery';
 
 @Component({
   selector: 'app-portfolio',
@@ -14,39 +14,33 @@ import { NavbarComponent } from 'src/app/shared/component/header/navbar/navbar.c
 
 export class PortfolioComponent {
 
-  @ViewChild(ModalComponent) 'modal' : ModalComponent;
-  public projetos:Portfolio;
-  gallery: Object;
+  @ViewChild(ModalComponent) 'modal': ModalComponent;
+  public projects: Portfolio[] = [];
+  public galleries: Gallery[] = [];
 
 
-  constructor(
-    private portfolioService: PortfolioService,
-    public navbar:NavbarComponent) {
+  constructor(private portfolioService: PortfolioService) {
 
     this.getProject();
   }
 
 
-  setValuesModal(gallery: Object) {
-    this.gallery = gallery;
+  setValuesModal(galleries: Gallery[]) {
+    this.galleries = galleries;
     this.modal.images = [];
-    
+
     setTimeout(() => {
-     
-    for (let i in Object.entries(this.gallery)) {
-      this.modal.images[i] =
-        new Image(
-          parseInt(i),
-          {
-            img: this.gallery[i].url_galeria
-          }
-        )
-    }
-    
-    this.modal.imagesHtmlDescriptions = this.modal.images;
-    this.modal.imagesRect = this.modal.images;
-    this.modal.imagesMixedSizes = this.modal.images;
-    this.modal.openModalViaService(1, 0);      
+
+      let i = 0;
+      this.galleries.map(gallery => {
+        this.modal.images[i] = new Image(Number(i), { img: this.galleries[i].url_galeria });
+        i++;
+      });
+
+      this.modal.imagesHtmlDescriptions = this.modal.images;
+      this.modal.imagesRect = this.modal.images;
+      this.modal.imagesMixedSizes = this.modal.images;
+      this.modal.openModalViaService(1, 0);
     }, 500);
   }
 
@@ -54,15 +48,11 @@ export class PortfolioComponent {
     this.portfolioService.getService(environment.apiPortfolio)
       .subscribe(
         result => {
-          this.projetos = result;
-        },
-        error => {
-          console.log(error);
-        }
-      );
+          this.projects = result;
+        });
   }
 
-  public getLengthProject(portfolio){
+  public getLengthProject(portfolio) {
     return portfolio.length;
   }
 

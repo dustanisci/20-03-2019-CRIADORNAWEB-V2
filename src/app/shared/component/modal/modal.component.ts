@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
   AccessibilityConfig,
-  Action,
   AdvancedLayout,
   ButtonEvent,
   ButtonsConfig,
@@ -20,7 +19,7 @@ import {
   PreviewConfig
 } from '@ks89/angular-modal-gallery';
 
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { VERSION } from '@angular/platform-browser-dynamic';
 
 @Component({
@@ -43,7 +42,7 @@ export class ModalComponent implements OnInit {
 
   }
 
-  images: Image[] = [
+  public images: Image[] = [
     new Image(
       0,
       { // modal
@@ -52,34 +51,36 @@ export class ModalComponent implements OnInit {
     )
   ];
 
-  imagesHtmlDescriptions = this.images;
-  imagesRect = this.images;
-  imagesMixedSizes = this.images;
+  public imagesHtmlDescriptions = this.images;
+  public imagesRect = this.images;
+  public imagesMixedSizes = this.images;
 
-  customPlainGalleryRowConfig: PlainGalleryConfig = {
+  public customPlainGalleryRowConfig: PlainGalleryConfig = {
     strategy: PlainGalleryStrategy.CUSTOM,
     layout: new AdvancedLayout(-1, true)
   };
 
-  customPlainGalleryColumnConfig: PlainGalleryConfig = {
+  public customPlainGalleryColumnConfig: PlainGalleryConfig = {
     strategy: PlainGalleryStrategy.CUSTOM,
     layout: new AdvancedLayout(-1, true)
   };
 
-  customPlainGalleryRowDescConfig: PlainGalleryConfig = {
+  public customPlainGalleryRowDescConfig: PlainGalleryConfig = {
     strategy: PlainGalleryStrategy.CUSTOM,
     layout: new AdvancedLayout(-1, true)
   };
 
-  plainGalleryRow: PlainGalleryConfig = {
+  public plainGalleryRow: PlainGalleryConfig = {
     strategy: PlainGalleryStrategy.ROW,
     layout: new LineLayout({ width: '100%', height: 'auto' }, { length: 0, wrap: true }, 'flex-start')
   };
-  plainGalleryRowSpaceAround: PlainGalleryConfig = {
+
+  public plainGalleryRowSpaceAround: PlainGalleryConfig = {
     strategy: PlainGalleryStrategy.ROW,
     layout: new LineLayout({ width: '50px', height: '50px' }, { length: 2, wrap: true }, 'space-around')
   };
-  plainGalleryRowATags: PlainGalleryConfig = {
+
+  public plainGalleryRowATags: PlainGalleryConfig = {
     strategy: PlainGalleryStrategy.ROW,
     layout: new LineLayout({ width: '95px', height: '63px' }, { length: 4, wrap: true }, 'flex-start'),
     // when advanced is defined, additionalBackground: '50% 50%/cover' will be used by default.
@@ -87,31 +88,31 @@ export class ModalComponent implements OnInit {
     advanced: { aTags: true, additionalBackground: '50% 50%/cover' }
   };
 
-  plainGalleryColumn: PlainGalleryConfig = {
+  public plainGalleryColumn: PlainGalleryConfig = {
     strategy: PlainGalleryStrategy.COLUMN,
     layout: new LineLayout({ width: '50px', height: '50px' }, { length: 3, wrap: true }, 'flex-start')
   };
 
-  plainGalleryGrid: PlainGalleryConfig = {
+  public plainGalleryGrid: PlainGalleryConfig = {
     strategy: PlainGalleryStrategy.GRID,
     layout: new GridLayout({ width: '80px', height: '80px' }, { length: 3, wrap: true })
   };
 
   // array with a single image inside (the first one)
-  singleImage: Image[] = [this.images[0]];
+  public singleImage: Image[] = [this.images[0]];
 
-  dotsConfig: DotsConfig = {
+  public dotsConfig: DotsConfig = {
     visible: false
   };
 
-  customDescription: Description = {
+  public customDescription: Description = {
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
     imageText: 'Look this image ',
     numberSeparator: ' of ',
     beforeTextDescription: ' => '
   };
 
-  customDescriptionStyle: Description = {
+  public customDescriptionStyle: Description = {
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
     imageText: 'Look this image ',
     numberSeparator: ' of ',
@@ -130,14 +131,14 @@ export class ModalComponent implements OnInit {
     }
   };
 
-  customDescriptionHideIfEmpty: Description = {
+  public customDescriptionHideIfEmpty: Description = {
     strategy: DescriptionStrategy.HIDE_IF_EMPTY,
     imageText: 'Look this image ',
     numberSeparator: ' of ',
     beforeTextDescription: ' => '
   };
 
-  customFullDescription: Description = {
+  public customFullDescription: Description = {
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
     // you should build this value programmaticaly with the result of (show)="..()" event
     customFullDescription: 'Custom description of the current visible image'
@@ -147,7 +148,7 @@ export class ModalComponent implements OnInit {
     // beforeTextDescription: '',
   };
 
-  customFullDescriptionHidden: Description = {
+  public customFullDescriptionHidden: Description = {
     strategy: DescriptionStrategy.ALWAYS_HIDDEN,
     // you should build this value programmaticaly with the result of (show)="..()" event
     customFullDescription: 'Custom description of the current visible image'
@@ -163,26 +164,29 @@ export class ModalComponent implements OnInit {
   //   unit: 'px'
   // };
 
-  buttonsConfigDefault: ButtonsConfig = {
+  public buttonsConfigDefault: ButtonsConfig = {
     visible: true,
     strategy: ButtonsStrategy.DEFAULT
   };
-  buttonsConfigSimple: ButtonsConfig = {
+
+  public buttonsConfigSimple: ButtonsConfig = {
     visible: true,
     strategy: ButtonsStrategy.SIMPLE
   };
-  buttonsConfigAdvanced: ButtonsConfig = {
+
+  public buttonsConfigAdvanced: ButtonsConfig = {
     visible: true,
     strategy: ButtonsStrategy.ADVANCED
   };
-  buttonsConfigFull: ButtonsConfig = {
+
+  public buttonsConfigFull: ButtonsConfig = {
     visible: true,
     strategy: ButtonsStrategy.FULL
   };
 
   // default buttons but extUrl will open the link in a new tab instead of the current one
   // this requires to specify all buttons manually (also if they are not really custom)
-  customButtonsConfigExtUrlNewTab: ButtonsConfig = {
+  public customButtonsConfigExtUrlNewTab: ButtonsConfig = {
     visible: true,
     strategy: ButtonsStrategy.CUSTOM,
     buttons: [
@@ -202,7 +206,7 @@ export class ModalComponent implements OnInit {
     ]
   };
 
-  customButtonsFontAwesomeConfig: ButtonsConfig = {
+  public customButtonsFontAwesomeConfig: ButtonsConfig = {
     visible: true,
     strategy: ButtonsStrategy.CUSTOM,
     buttons: [
@@ -237,32 +241,32 @@ export class ModalComponent implements OnInit {
     ]
   };
 
-  previewConfigOneImage: PreviewConfig = {
+  public previewConfigOneImage: PreviewConfig = {
     visible: true,
     number: 1
   };
 
-  previewConfigNoArrows: PreviewConfig = {
+  public previewConfigNoArrows: PreviewConfig = {
     visible: true,
     arrows: false
   };
 
-  previewConfigNoClickable: PreviewConfig = {
+  public previewConfigNoClickable: PreviewConfig = {
     visible: true,
     clickable: false
   };
 
   // TODO still not implemented
-  previewConfigAlwaysCenter: PreviewConfig = {
+  public previewConfigAlwaysCenter: PreviewConfig = {
     visible: true
   };
 
-  previewConfigCustomSize: PreviewConfig = {
+  public previewConfigCustomSize: PreviewConfig = {
     visible: true,
     size: { width: '30px', height: '30px' }
   };
 
-  accessibilityConfig: AccessibilityConfig = {
+  public accessibilityConfig: AccessibilityConfig = {
     backgroundAriaLabel: 'CUSTOM Modal gallery full screen background',
     backgroundTitle: 'CUSTOM background title',
 
@@ -307,27 +311,22 @@ export class ModalComponent implements OnInit {
     carouselPreviewScrollNextTitle: 'Scroll next previews'
   };
 
-  openImageModalRow(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
+  public openImageModalRow(image: Image) {
     const index: number = this.getCurrentIndexCustomLayout(image, this.images);
     this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(index, true) });
   }
 
-  openImageModalColumn(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery column, with image: ', image);
+  public openImageModalColumn(image: Image) {
     const index: number = this.getCurrentIndexCustomLayout(image, this.images);
     this.customPlainGalleryColumnConfig = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(index, true) });
   }
 
-  openImageModalRowDescription(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery row and description, with image: ', image);
+  public openImageModalRowDescription(image: Image) {
     const index: number = this.getCurrentIndexCustomLayout(image, this.imagesRect);
     this.customPlainGalleryRowDescConfig = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(index, true) });
   }
 
-  onButtonBeforeHook(event: ButtonEvent) {
-    console.log('onButtonBeforeHook ', event);
-
+  public onButtonBeforeHook(event: ButtonEvent) {
     if (!event || !event.button) {
       return;
     }
@@ -340,16 +339,11 @@ export class ModalComponent implements OnInit {
 
     if (event.button.type === ButtonType.DELETE) {
       // remove the current image and reassign all other to the array of images
-
-      console.log('delete in app with images count ' + this.images.length);
-
       this.images = this.images.filter((val: Image) => event.image && val.id !== event.image.id);
     }
   }
 
-  onButtonAfterHook(event: ButtonEvent) {
-    console.log('onButtonAfterHook ', event);
-
+  public onButtonAfterHook(event: ButtonEvent) {
     if (!event || !event.button) {
       return;
     }
@@ -360,8 +354,7 @@ export class ModalComponent implements OnInit {
     // will be really closed.
   }
 
-  onCustomButtonBeforeHook(event: ButtonEvent, galleryId: number | undefined) {
-    console.log('onCustomButtonBeforeHook with galleryId=' + galleryId + ' and event: ', event);
+  public onCustomButtonBeforeHook(event: ButtonEvent, galleryId: number | undefined) {
     if (!event || !event.button) {
       return;
     }
@@ -369,7 +362,6 @@ export class ModalComponent implements OnInit {
     // action is applied.
 
     if (event.button.type === ButtonType.CUSTOM) {
-      console.log('adding a new random image at the end');
       this.addRandomImage();
 
       setTimeout(() => {
@@ -378,65 +370,37 @@ export class ModalComponent implements OnInit {
     }
   }
 
-  onCustomButtonAfterHook(event: ButtonEvent, galleryId: number | undefined) {
-    console.log('onCustomButtonAfterHook with galleryId=' + galleryId + ' and event: ', event);
+  public onCustomButtonAfterHook(event: ButtonEvent, galleryId: number | undefined) {
     if (!event || !event.button) {
       return;
     }
     // Invoked after both a click on a button and its related action.
   }
 
-  onImageLoaded(event: ImageModalEvent) {
-    // angular-modal-gallery will emit this event if it will load successfully input images
-    console.log('onImageLoaded action: ' + Action[event.action]);
-    console.log('onImageLoaded result:' + event.result);
-  }
-
-  onVisibleIndex(event: ImageModalEvent) {
-    console.log('onVisibleIndex action: ' + Action[event.action]);
-    console.log('onVisibleIndex result:' + event.result);
-  }
-
-  onIsFirstImage(event: ImageModalEvent) {
-    console.log('onIsFirstImage onfirst action: ' + Action[event.action]);
-    console.log('onIsFirstImage onfirst result:' + event.result);
-  }
-
-  onIsLastImage(event: ImageModalEvent) {
-    console.log('onIsLastImage onlast action: ' + Action[event.action]);
-    console.log('onIsLastImage onlast result:' + event.result);
-  }
-
-  onCloseImageModal(event: ImageModalEvent) {
-    console.log('onClose action: ' + Action[event.action]);
-    console.log('onClose result:' + event.result);
+  public onCloseImageModal(event: ImageModalEvent) {
     // reset custom plain gallery config
     this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(-1, true) });
     this.customPlainGalleryColumnConfig = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(-1, true) });
     this.customPlainGalleryRowDescConfig = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(-1, true) });
   }
 
-  onShowAutoCloseExample(event: ImageModalEvent, galleryId: number) {
-    console.log(`onShowAutoCloseExample with id=${galleryId} action: ` + Action[event.action]);
-    console.log('onShowAutoCloseExample result:' + event.result);
-    console.log('Starting timeout of 3 second to close modal gallery automatically');
+  public onShowAutoCloseExample(event: ImageModalEvent, galleryId: number) {
     setTimeout(() => {
-      console.log('setTimeout end - closing gallery with id=' + galleryId);
       this.galleryService.closeGallery(galleryId);
     }, 3000);
   }
 
-  addRandomImage() {
+  public addRandomImage() {
     const imageToCopy: Image = this.images[Math.floor(Math.random() * this.images.length)];
     const newImage: Image = new Image(this.images.length - 1 + 1, imageToCopy.modal, imageToCopy.plain);
     this.images = [...this.images, newImage];
   }
 
-  openModalViaService(id: number | undefined, index: number) {
+  public openModalViaService(id: number | undefined, index: number) {
     this.galleryService.openGallery(id, index);
   }
 
-  trackById(index: number, item: Image) {
+  public trackById(index: number, item: Image) {
     return item.id;
   }
 

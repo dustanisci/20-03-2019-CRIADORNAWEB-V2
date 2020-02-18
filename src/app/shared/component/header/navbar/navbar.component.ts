@@ -1,32 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
-
+export const items = [
+  { name: 'Início', url: '/home' },
+  { name: 'Tecnologias', url: '/technology' },
+  { name: 'Portfólio', url: '/portfolio' },
+  { name: 'Sobre', url: '/about' },
+  { name: 'Contato', url: '/contact' }];
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
+
 export class NavbarComponent implements OnInit {
 
-  public items = {
-    '1-home': [{
-      'name': 'início', 'url': '/home'
-    }],
-    '2-technology': [{
-      'name': 'tecnologias', 'url': '/technology'
-    }],
-    '3-portfolio': [{
-      'name': 'portfólio', 'url': '/portfolio'
-    }],
-    '4-about': [{
-      'name': 'sobre', 'url': '/about'
-    }],
-    '5-contact': [{
-      'name': 'contato', 'url': '/contact'
-    }]
-  };
-
-  public menuIcon: boolean = false;
+  public menuIcon = false;
+  public items = items;
 
   constructor() {
   }

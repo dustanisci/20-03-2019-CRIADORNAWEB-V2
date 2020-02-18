@@ -1,8 +1,7 @@
-import { IPortfolio } from '../interfaces/IPortfolio';
-import { Galeria } from './galeria';
+import { Gallery } from './Gallery';
 
-export class Portfolio implements IPortfolio {
+export interface Portfolio {
     id_projeto: number;
     url_site_projeto: string;
-    galerias: Galeria[];
+    galerias: Gallery[];
 }
