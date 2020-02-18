@@ -1,17 +1,27 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './page/home/home.component';
-import { ContactComponent } from './page/contact/contact.component';
-import { AboutComponent } from './page/about/about.component';
-import { TechnologyComponent } from './page/technology/technology.component';
-import { PortfolioComponent } from './page/portfolio/portfolio.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'portfolio', component: PortfolioComponent },
-  { path: 'technology', component: TechnologyComponent },
+  {
+    path: 'home',
+    loadChildren: () => import('./page/home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./page/contact/contact.module').then(m => m.ContactModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./page/about/about.module').then(m => m.AboutModule)
+  },
+  {
+    path: 'portfolio',
+    loadChildren: () => import('./page/portfolio/portfolio.module').then(m => m.PortfolioModule)
+  },
+  {
+    path: 'technology',
+    loadChildren: () => import('./page/technology/technology.module').then(m => m.TechnologyModule)
+  },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];

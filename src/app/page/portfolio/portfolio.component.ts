@@ -20,7 +20,6 @@ export class PortfolioComponent {
 
 
   constructor(private portfolioService: PortfolioService) {
-
     this.getProject();
   }
 

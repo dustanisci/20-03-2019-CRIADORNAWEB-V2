@@ -17,33 +17,16 @@ import {GalleryModule} from '@ks89/angular-modal-gallery';
 @NgModule({
   declarations: [
     FooterComponent,
-    BannerComponent,
-    ModalComponent,
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
-    HeaderModule,
-    FlexLayoutModule,
-    TrianglesModule, 
-    GalleryModule,
-    
+    HeaderModule
   ],
   exports: [
-    FooterComponent,
     HeaderModule,
-    TrianglesModule,
-    BannerComponent,
-    ModalComponent,
-    PipeModule,
     HttpClientModule,
-    FlexLayoutModule,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    BlackLinesModule,
-    FlexLayoutModule,
-    
+    CommonModule,  
   ]
 })
 export class SharedModule { }
