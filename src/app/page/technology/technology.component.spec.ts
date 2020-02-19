@@ -5,6 +5,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { BannerComponent } from 'src/app/shared/component/banner/banner.component';
 import { TrianglesComponent } from 'src/app/shared/component/triangles/triangles.component';
 import { NavbarComponent } from 'src/app/shared/component/header/navbar/navbar.component';
+import { BannerModule } from 'src/app/shared/component/banner/banner.module';
+import { TrianglesModule } from 'src/app/shared/component/triangles/triangles.module';
 
 describe('TechnologyComponent', () => {
   let component: TechnologyComponent;
@@ -12,8 +14,8 @@ describe('TechnologyComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [ TechnologyComponent, BannerComponent, TrianglesComponent ],
+      imports: [RouterTestingModule, BannerModule, TrianglesModule],
+      declarations: [ TechnologyComponent],
       providers : [NavbarComponent]
     })
     .compileComponents();

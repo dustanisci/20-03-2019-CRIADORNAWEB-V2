@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PortfolioComponent } from './portfolio.component';
 import { BannerComponent } from 'src/app/shared/component/banner/banner.component';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -11,6 +10,11 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { PortfolioService } from './portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
+import { RouterModule } from '@angular/router';
+import { TrianglesModule } from 'src/app/shared/component/triangles/triangles.module';
+import { BannerModule } from 'src/app/shared/component/banner/banner.module';
 
 describe('PortfolioComponent', () => {
   let component: PortfolioComponent;
@@ -18,8 +22,18 @@ describe('PortfolioComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, PipeModule, GalleryModule.forRoot(), HttpClientModule, BrowserModule],
-      declarations: [PortfolioComponent, BannerComponent, TrianglesComponent, ModalComponent],
+      imports: [
+        RouterTestingModule,
+        CommonModule,
+        PipeModule,
+        GalleryModule.forRoot(),
+        FlexLayoutModule,
+        FlexModule,
+        HttpClientModule,
+        TrianglesModule,
+        BannerModule
+      ],
+      declarations: [PortfolioComponent],
       providers: [PortfolioService, NavbarComponent, HttpClientModule]
     })
       .compileComponents();

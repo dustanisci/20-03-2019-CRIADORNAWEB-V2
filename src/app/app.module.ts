@@ -20,7 +20,6 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
     HeaderModule,
     FlexLayoutModule,
     FlexModule,
-    GalleryModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

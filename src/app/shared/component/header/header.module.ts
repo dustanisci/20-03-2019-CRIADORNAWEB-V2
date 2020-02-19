@@ -19,7 +19,6 @@ import { ColoredLinesComponent } from '../colored-lines/colored-lines.component'
     CommonModule,
     FlexLayoutModule,
     AppRoutingModule,
-    PipeModule,
   ],
   providers: [
     NavbarComponent,

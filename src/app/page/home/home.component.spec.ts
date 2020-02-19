@@ -1,10 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HomeComponent } from './home.component';
-import { BannerComponent } from 'src/app/shared/component/banner/banner.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { TrianglesComponent } from 'src/app/shared/component/triangles/triangles.component';
 import { NavbarComponent } from 'src/app/shared/component/header/navbar/navbar.component';
+import { BannerModule } from 'src/app/shared/component/banner/banner.module';
+import { TrianglesModule } from 'src/app/shared/component/triangles/triangles.module';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -12,11 +11,11 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [ HomeComponent, BannerComponent, TrianglesComponent ],
-      providers : [NavbarComponent]
+      imports: [RouterTestingModule, BannerModule, TrianglesModule],
+      declarations: [HomeComponent],
+      providers: [NavbarComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

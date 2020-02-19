@@ -26,7 +26,7 @@ const portfolioRoute = [
   imports: [
     CommonModule,
     PipeModule,
-    GalleryModule,
+    GalleryModule.forRoot(),
     FlexLayoutModule,
     FlexModule,
     RouterModule.forChild(portfolioRoute),
