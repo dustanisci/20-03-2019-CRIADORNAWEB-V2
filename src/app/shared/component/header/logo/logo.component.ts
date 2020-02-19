@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { items } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-logo',
@@ -7,7 +7,10 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent implements OnInit {
-  constructor(public navbar: NavbarComponent) {
+
+  public items = items;
+
+  constructor() {
   }
 
   ngOnInit() {

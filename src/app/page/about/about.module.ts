@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about.component';
 import { RouterModule } from '@angular/router';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { BannerComponent } from 'src/app/shared/component/banner/banner.component';
+import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 import { TrianglesModule } from 'src/app/shared/component/triangles/triangles.module';
+import { BannerModule } from 'src/app/shared/component/banner/banner.module';
 
 const aboutRoute = [
   { path: '', component: AboutComponent }
@@ -13,13 +13,14 @@ const aboutRoute = [
 @NgModule({
   declarations: [
     AboutComponent,
-    BannerComponent
   ],
   imports: [
     CommonModule,
+    RouterModule.forChild(aboutRoute),
     FlexLayoutModule,
+    FlexModule,
     TrianglesModule,
-    RouterModule.forChild(aboutRoute)
+    BannerModule
   ]
 })
 export class AboutModule { }

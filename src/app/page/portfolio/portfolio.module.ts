@@ -6,9 +6,13 @@ import { ModalComponent } from 'src/app/shared/component/modal/modal.component';
 import { PipeModule } from 'src/app/shared/pipe/pipe.module';
 import { RouterModule } from '@angular/router';
 import { PortfolioService } from './portfolio.service';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 import { BannerComponent } from 'src/app/shared/component/banner/banner.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TrianglesComponent } from 'src/app/shared/component/triangles/triangles.component';
 import { TrianglesModule } from 'src/app/shared/component/triangles/triangles.module';
+import { BannerModule } from 'src/app/shared/component/banner/banner.module';
+import { KeyboardService } from '@ks89/angular-modal-gallery/lib/services/keyboard.service';
 
 const portfolioRoute = [
   { path: '', component: PortfolioComponent }
@@ -18,15 +22,17 @@ const portfolioRoute = [
   declarations: [
     PortfolioComponent,
     ModalComponent,
-    BannerComponent
   ],
   imports: [
     CommonModule,
     PipeModule,
     GalleryModule,
     FlexLayoutModule,
+    FlexModule,
+    RouterModule.forChild(portfolioRoute),
+    HttpClientModule,
     TrianglesModule,
-    RouterModule.forChild(portfolioRoute)
+    BannerModule
   ],
   providers: [
     PortfolioService

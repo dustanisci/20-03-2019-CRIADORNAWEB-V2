@@ -24,7 +24,7 @@ export class PortfolioComponent {
   }
 
 
-  setValuesModal(galleries: Gallery[]) {
+  public setValuesModal(galleries: Gallery[]) {
     this.galleries = galleries;
     this.modal.images = [];
 

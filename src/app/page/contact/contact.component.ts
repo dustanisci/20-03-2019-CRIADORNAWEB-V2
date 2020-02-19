@@ -20,7 +20,9 @@ import { environment } from '../../../environments/environment';
     ])
   ]
 })
+
 export class ContactComponent implements OnInit {
+
   public formWhats: FormGroup;
   public environment = environment.apiWhatsapp;
   constructor(private formBuilder: FormBuilder) { }
@@ -28,6 +30,6 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.formWhats = this.formBuilder.group({
       textWhats: this.formBuilder.control('', [])
-    })
+    });
   }
 }

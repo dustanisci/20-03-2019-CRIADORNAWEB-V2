@@ -10,8 +10,8 @@ export class BannerComponent {
   @Input() urlImage: string;
   @Input() linkPage: string;
 
-  constructor() { 
-    
+  constructor() {
+
   }
 
 }

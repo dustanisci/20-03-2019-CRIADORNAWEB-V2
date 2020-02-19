@@ -1,8 +1,12 @@
+a {
+  cursor: pointer;
+}
+
 div {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
-  height:300px;
+  height: 300px;
 
   @media only screen and (max-width: 1278px) {
     background-size: cover;
@@ -17,6 +21,6 @@ div {
   @media only screen and (min-width: 2200px) {
     background-size: cover;
     background-position: right center;
-    height:500px;
+    height: 500px;
   }
 }

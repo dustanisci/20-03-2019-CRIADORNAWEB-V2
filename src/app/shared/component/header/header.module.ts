@@ -6,20 +6,20 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { LogoComponent } from './logo/logo.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { PipeModule } from '../../pipe/pipe.module';
-import { ColoredLinesModule } from '../colored-lines/colored-lines.module';
+import { ColoredLinesComponent } from '../colored-lines/colored-lines.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     HeaderComponent,
-    LogoComponent
+    LogoComponent,
+    ColoredLinesComponent
   ],
   imports: [
     CommonModule,
     FlexLayoutModule,
     AppRoutingModule,
     PipeModule,
-    ColoredLinesModule,
   ],
   providers: [
     NavbarComponent,

@@ -1,4 +1,4 @@
-<a *ngIf="linkPage" routerLink="{{ linkPage }}">
+<a class="d-block" *ngIf="linkPage" [routerLink]="linkPage">
   <div [ngStyle]="{ 'background-image': 'url('+urlImage+')'}"></div>
 </a>
 
