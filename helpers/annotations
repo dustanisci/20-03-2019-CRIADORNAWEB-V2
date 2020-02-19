@@ -1,0 +1,77 @@
+Em javascript puro, cria-se um arquivo de teste spec para cada classe.
+No framework angular já possui cada um por padrão de configuração.
+
+** it = cenário de teste com descrição do que faz.
+shoud....
+
+- Passa uma função e faz o teste dentro deste cenário.
+
+** Expect = é a saída do cenário de teste.
+- Deve passar um expect dentro para ver se dá certo (true) ou errado (false)
+
+- Quando utilizo uma variavel ou a instância de uma nova classe em muitos cenários, utilizamos o beforeEach.
+
+** BeforeEach = Executa a função antes de cada teste.
+Exemplo: 
+
+let eduardo;
+beforeEach( () => {
+  eduardo = new Teste("xpto", 1);
+});
+
+it("devo fazer xpto, () => {
+  let carro = new Carro(eduardo)
+});
+
+** describe = definir os testes que estarão englobados naquele bloco
+
+describe("teste de consulta", () => {
+  beforeach ....
+  it....
+})
+
+- Existe a possibilidade de ter subníveis de describe, separa melhor o relatório de resultados de teste.
+
+
+=======
+Exemplo de chamar variaveis de um componente no Angular
+
+  it('should have as title: app works!', () => {
+    inject([AppComponent], (app: AppComponent) => {
+      expect(app.title).toEqual('app works!');
+    });
+  });
+
+===========
+Comando ng test com coverage, mostra no console ou basta abrir o arquivo index na pasta gerada coverage, que está por fora da pasta src
+ng test --code-coverage
+
+Statement: I think this article does a pretty goo d job explaining what a statement it. The coverage tests that all your statements are getting hit.
+https://2ality.com/2012/09/expressions-vs-statements.html
+
+Branch: When you use conditionals it create branches
+
+if (condition) {
+  doThis();       // this is a branch
+} else {
+  doThat();       // this is a branch
+}
+Is your testing hitting all the branches?
+
+Functions: The functions that you declare.
+
+class SomeClas {
+  methodOne() {}
+  methodTwo() {}
+}
+
+it('..', () => {
+  new SomeClass().methodOne();
+})
+SomeClass has two methods, but only one is getting tested. 50%. If you either explicitly call methodTwo in your test or methodOne calls methodTwo, your coverage goes to 100%
+
+Lines:: The lines of code, checks to see if all the lines of code are being hit.
+
+===
+test de service
+https://blog.thoughtram.io/angular/2016/11/28/testing-services-with-http-in-angular-2.html

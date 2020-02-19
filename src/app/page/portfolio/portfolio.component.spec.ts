@@ -1,20 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { PortfolioComponent } from './portfolio.component';
-import { BannerComponent } from 'src/app/shared/component/banner/banner.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { TrianglesComponent } from 'src/app/shared/component/triangles/triangles.component';
-import { NavbarComponent } from 'src/app/shared/component/header/navbar/navbar.component';
 import { PipeModule } from 'src/app/shared/pipe/pipe.module';
-import { ModalComponent } from 'src/app/shared/component/modal/modal.component';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { PortfolioService } from './portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
-import { RouterModule } from '@angular/router';
 import { TrianglesModule } from 'src/app/shared/component/triangles/triangles.module';
 import { BannerModule } from 'src/app/shared/component/banner/banner.module';
+import { environment } from 'src/environments/environment';
 
 describe('PortfolioComponent', () => {
   let component: PortfolioComponent;
@@ -34,7 +29,7 @@ describe('PortfolioComponent', () => {
         BannerModule
       ],
       declarations: [PortfolioComponent],
-      providers: [PortfolioService, NavbarComponent, HttpClientModule]
+      providers: [PortfolioService, HttpClientModule]
     })
       .compileComponents();
   }));
@@ -47,5 +42,15 @@ describe('PortfolioComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should check that the gallery is not empty', async(inject([PortfolioService], (portfolioService) => {
+    portfolioService.getService(environment.apiPortfolio).subscribe((project) => {
+      expect(project.length).toBeGreaterThanOrEqual(1);
+    });
+  })));
+
+  it('should check that the project is not empty', () => {
+
   });
 });

@@ -1,4 +1,4 @@
-import { Gallery } from './Gallery';
+import { Gallery } from './gallery';
 
 export interface Portfolio {
     id_projeto: number;

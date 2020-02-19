@@ -10,7 +10,7 @@ describe('PortfolioService', () => {
   }));
 
   it('should be created', () => {
-    const service: PortfolioService = TestBed.get(PortfolioService);
+    const service: PortfolioService = TestBed.inject(PortfolioService);
     expect(service).toBeTruthy();
   });
 });

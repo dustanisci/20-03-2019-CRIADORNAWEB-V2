@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+
 export const items = [
   { name: 'Início', url: '/home' },
   { name: 'Tecnologias', url: '/technology' },
   { name: 'Portfólio', url: '/portfolio' },
   { name: 'Sobre', url: '/about' },
   { name: 'Contato', url: '/contact' }];
+  
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

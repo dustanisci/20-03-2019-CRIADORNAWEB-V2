@@ -29,7 +29,6 @@ export class PortfolioComponent {
     this.modal.images = [];
 
     setTimeout(() => {
-
       let i = 0;
       this.galleries.map(gallery => {
         this.modal.images[i] = new Image(Number(i), { img: this.galleries[i].url_galeria });
