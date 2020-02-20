@@ -1,10 +1,10 @@
-import { Component,  ViewChild } from '@angular/core';
-import { environment } from '../../../environments/environment';
+import { Component, ViewChild, OnDestroy } from '@angular/core';
 import { PortfolioService } from './portfolio.service';
 import { Portfolio } from 'src/app/shared/model/portfolio';
 import { ModalComponent } from 'src/app/shared/component/modal/modal.component';
 import { Image } from '@ks89/angular-modal-gallery';
 import { Gallery } from 'src/app/shared/model/Gallery';
+import { Subscription } from 'rxjs/internal/Subscription';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,17 +12,19 @@ import { Gallery } from 'src/app/shared/model/Gallery';
   styleUrls: ['./portfolio.component.scss']
 })
 
-export class PortfolioComponent {
+export class PortfolioComponent implements OnDestroy {
 
   @ViewChild(ModalComponent) 'modal': ModalComponent;
   public projects: Portfolio[] = [];
   public galleries: Gallery[] = [];
 
-
   constructor(private portfolioService: PortfolioService) {
-    this.getProject();
+    this.projectData();
   }
 
+  ngOnDestroy(): void {
+    this.projectData().unsubscribe();
+  }
 
   public setValuesModal(galleries: Gallery[]) {
     this.galleries = galleries;
@@ -42,12 +44,10 @@ export class PortfolioComponent {
     }, 500);
   }
 
-  public getProject(): void {
-    this.portfolioService.getService(environment.apiPortfolio)
-      .subscribe(
-        result => {
-          this.projects = result;
-        });
+  public projectData(): Subscription {
+    return this.portfolioService.getProjects().subscribe(result => {
+      this.projects = result;
+    });
   }
 
   public getLengthProject(portfolio) {

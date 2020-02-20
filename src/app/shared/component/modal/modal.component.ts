@@ -19,7 +19,6 @@ import {
   PreviewConfig
 } from '@ks89/angular-modal-gallery';
 
-import { DomSanitizer } from '@angular/platform-browser';
 import { VERSION } from '@angular/platform-browser-dynamic';
 
 @Component({
@@ -30,17 +29,6 @@ import { VERSION } from '@angular/platform-browser-dynamic';
 export class ModalComponent implements OnInit {
 
   public name: string;
-
-  constructor(
-    private galleryService: GalleryService,
-    private sanitizer: DomSanitizer
-  ) {
-    this.name = `${VERSION.full}`;
-  }
-
-  ngOnInit() {
-
-  }
 
   public images: Image[] = [
     new Image(
@@ -83,8 +71,6 @@ export class ModalComponent implements OnInit {
   public plainGalleryRowATags: PlainGalleryConfig = {
     strategy: PlainGalleryStrategy.ROW,
     layout: new LineLayout({ width: '95px', height: '63px' }, { length: 4, wrap: true }, 'flex-start'),
-    // when advanced is defined, additionalBackground: '50% 50%/cover' will be used by default.
-    // I added this here, to be more explicit.
     advanced: { aTags: true, additionalBackground: '50% 50%/cover' }
   };
 
@@ -98,7 +84,6 @@ export class ModalComponent implements OnInit {
     layout: new GridLayout({ width: '80px', height: '80px' }, { length: 3, wrap: true })
   };
 
-  // array with a single image inside (the first one)
   public singleImage: Image[] = [this.images[0]];
 
   public dotsConfig: DotsConfig = {
@@ -127,7 +112,6 @@ export class ModalComponent implements OnInit {
       position: 'absolute',
       top: '0px',
       height: '25px'
-      // be careful to use width, in particular with % values
     }
   };
 
@@ -140,29 +124,13 @@ export class ModalComponent implements OnInit {
 
   public customFullDescription: Description = {
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
-    // you should build this value programmaticaly with the result of (show)="..()" event
     customFullDescription: 'Custom description of the current visible image'
-    // if customFullDescription !== undefined, all other fields will be ignored
-    // imageText: 'Imagem',
-    // numberSeparator: '/',
-    // beforeTextDescription: '',
   };
 
   public customFullDescriptionHidden: Description = {
     strategy: DescriptionStrategy.ALWAYS_HIDDEN,
-    // you should build this value programmaticaly with the result of (show)="..()" event
     customFullDescription: 'Custom description of the current visible image'
-    // if customFullDescription !== undefined, all other fields will be ignored
-    // imageText: '',
-    // numberSeparator: '',
-    // beforeTextDescription: '',
   };
-
-  // customButtonsSize: ButtonSize = {
-  //   width: 10,
-  //   height: 10,
-  //   unit: 'px'
-  // };
 
   public buttonsConfigDefault: ButtonsConfig = {
     visible: true,
@@ -184,8 +152,6 @@ export class ModalComponent implements OnInit {
     strategy: ButtonsStrategy.FULL
   };
 
-  // default buttons but extUrl will open the link in a new tab instead of the current one
-  // this requires to specify all buttons manually (also if they are not really custom)
   public customButtonsConfigExtUrlNewTab: ButtonsConfig = {
     visible: true,
     strategy: ButtonsStrategy.CUSTOM,
@@ -193,7 +159,7 @@ export class ModalComponent implements OnInit {
       {
         className: 'ext-url-image',
         type: ButtonType.EXTURL,
-        extUrlInNewTab: true // <--- this is the important thing to understand this example
+        extUrlInNewTab: true
       },
       {
         className: 'download-image',
@@ -256,7 +222,6 @@ export class ModalComponent implements OnInit {
     clickable: false
   };
 
-  // TODO still not implemented
   public previewConfigAlwaysCenter: PreviewConfig = {
     visible: true
   };
@@ -311,6 +276,14 @@ export class ModalComponent implements OnInit {
     carouselPreviewScrollNextTitle: 'Scroll next previews'
   };
 
+  constructor(private galleryService: GalleryService) {
+    this.name = `${VERSION.full}`;
+  }
+
+  ngOnInit() {
+
+  }
+
   public openImageModalRow(image: Image) {
     const index: number = this.getCurrentIndexCustomLayout(image, this.images);
     this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(index, true) });
@@ -318,12 +291,14 @@ export class ModalComponent implements OnInit {
 
   public openImageModalColumn(image: Image) {
     const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryColumnConfig = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(index, true) });
+    this.customPlainGalleryColumnConfig = Object.assign(
+      {}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(index, true) });
   }
 
   public openImageModalRowDescription(image: Image) {
     const index: number = this.getCurrentIndexCustomLayout(image, this.imagesRect);
-    this.customPlainGalleryRowDescConfig = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(index, true) });
+    this.customPlainGalleryRowDescConfig = Object.assign(
+      {}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(index, true) });
   }
 
   public onButtonBeforeHook(event: ButtonEvent) {
@@ -331,14 +306,7 @@ export class ModalComponent implements OnInit {
       return;
     }
 
-    // Invoked after a click on a button, but before that the related
-    // action is applied.
-    // For instance: this method will be invoked after a click
-    // of 'close' button, but before that the modal gallery
-    // will be really closed.
-
     if (event.button.type === ButtonType.DELETE) {
-      // remove the current image and reassign all other to the array of images
       this.images = this.images.filter((val: Image) => event.image && val.id !== event.image.id);
     }
   }
@@ -347,19 +315,12 @@ export class ModalComponent implements OnInit {
     if (!event || !event.button) {
       return;
     }
-
-    // Invoked after both a click on a button and its related action.
-    // For instance: this method will be invoked after a click
-    // of 'close' button, but before that the modal gallery
-    // will be really closed.
   }
 
   public onCustomButtonBeforeHook(event: ButtonEvent, galleryId: number | undefined) {
     if (!event || !event.button) {
       return;
     }
-    // Invoked after a click on a button, but before that the related
-    // action is applied.
 
     if (event.button.type === ButtonType.CUSTOM) {
       this.addRandomImage();
@@ -374,14 +335,15 @@ export class ModalComponent implements OnInit {
     if (!event || !event.button) {
       return;
     }
-    // Invoked after both a click on a button and its related action.
   }
 
   public onCloseImageModal(event: ImageModalEvent) {
-    // reset custom plain gallery config
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryColumnConfig = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryRowDescConfig = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(-1, true) });
+    this.customPlainGalleryRowConfig = Object.assign(
+      {}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(-1, true) });
+    this.customPlainGalleryColumnConfig = Object.assign(
+      {}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(-1, true) });
+    this.customPlainGalleryRowDescConfig = Object.assign(
+      {}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(-1, true) });
   }
 
   public onShowAutoCloseExample(event: ImageModalEvent, galleryId: number) {
