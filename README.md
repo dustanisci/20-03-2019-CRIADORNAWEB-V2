@@ -1,4 +1,19 @@
-# Site Criador Na Web - V2 
-20/03/2019 - Site comercial o qual desenvolve soluções tecnológicas. Construído em Angular 9, Lazy Loading, Flex, Typescript, HTML 5, CSS 3 com palette, Javascript e testes com Karma/Jasmine.  
+# Site comercial - Criador na web
 
-Este site pode ser consultado no endereço: https://dustanisci.github.io/20-03-2019-site-criadornaweb-v2-angular7-git-io/
+<b>Descrição:</b> Site comercial o qual desenvolve soluções tecnológicas para clientes.
+
+<b>Endereço de acesso:</b> https://dustanisci.github.io/criadornaweb-company-angular9/
+
+<b>Tecnologias utilizadas:</b>
+<ul>
+  <li>Angular 9</li>
+  <li>Lazy Loading</li>
+  <li>Router</li>
+  <li>HTML 5 </li>
+  <li>SCSS / CSS 3</li>
+  <li>TypeScript</li>
+  <li>JavaScript</li>
+<li>Flex</li>
+<li>Lazy Loading</li>
+<li>Testes unitários com Karma/Jasmine</li>
+</ul>
