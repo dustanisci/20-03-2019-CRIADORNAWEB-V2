@@ -1,20 +1,18 @@
-import { Component, ViewChild, OnDestroy } from '@angular/core';
-import { PortfolioService } from './portfolio.service';
-import { Portfolio } from 'src/app/shared/model/portfolio';
-import { ModalComponent } from 'src/app/shared/component/modal/modal.component';
-import { Image } from '@ks89/angular-modal-gallery';
-import { Gallery } from 'src/app/shared/model/Gallery';
-import { Subscription } from 'rxjs/internal/Subscription';
+import { Component, ViewChild, OnDestroy } from "@angular/core";
+import { PortfolioService } from "./portfolio.service";
+import { Portfolio } from "src/app/shared/model/portfolio";
+import { ModalComponent } from "src/app/shared/component/modal/modal.component";
+import { Image } from "@ks89/angular-modal-gallery";
+import { Gallery } from "src/app/shared/model/Gallery";
+import { Subscription } from "rxjs/internal/Subscription";
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  selector: "app-portfolio",
+  templateUrl: "./portfolio.component.html",
+  styleUrls: ["./portfolio.component.scss"],
 })
-
 export class PortfolioComponent implements OnDestroy {
-
-  @ViewChild(ModalComponent) 'modal': ModalComponent;
+  @ViewChild(ModalComponent) "modal": ModalComponent;
   public projects: Portfolio[] = [];
   public galleries: Gallery[] = [];
 
@@ -32,8 +30,10 @@ export class PortfolioComponent implements OnDestroy {
 
     setTimeout(() => {
       let i = 0;
-      this.galleries.map(gallery => {
-        this.modal.images[i] = new Image(Number(i), { img: this.galleries[i].url_galeria });
+      this.galleries.map((gallery) => {
+        this.modal.images[i] = new Image(Number(i), {
+          img: this.galleries[i].url_galeria,
+        });
         i++;
       });
 
@@ -45,13 +45,12 @@ export class PortfolioComponent implements OnDestroy {
   }
 
   public projectData(): Subscription {
-    return this.portfolioService.getProjects().subscribe(result => {
-      this.projects = result;
+    return this.portfolioService.getProjects().subscribe({
+      next: (result) => (this.projects = result),
     });
   }
 
   public getLengthProject(portfolio) {
     return portfolio.length;
   }
-
 }
