@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiPortfolio : 'https://www.mocky.io/v2/5e3434273000008245d9637d',
+  apiPortfolio : 'https://raw.githubusercontent.com/peditapronto/backup-image/master/portfolioOld/portfolio.json',
   apiWhatsapp : 'https://api.whatsapp.com/send?phone=5511959662923&text='
 };
 
